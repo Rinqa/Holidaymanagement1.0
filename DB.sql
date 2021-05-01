@@ -10,11 +10,6 @@ create table Kompania(
 	Passwordi varchar(36),
 	Tel varchar(255)
 );
-drop table Kompania
-insert into Kompania (Emri,DrejtoriEmri,Email,Passwordi,Tel) values ('UBT','Rinor Biçku','r.biqk342@gmail.com','lenovot440','+38348638783');
----select * from Kompania
-
-
 
 create table departamenti(
 	Id int identity(1,1)  primary key,
@@ -27,8 +22,7 @@ create table Lokacioni(
 	Id int identity(1,1)  primary key,
 	Lokacioni varchar(255)
 );
-drop table Lokacioni
-insert into Lokacioni values ('Gjilan')
+
 create table Ekipi(
 	Id int identity(1,1)  primary key,
 	EkipiEmri varchar(255),
