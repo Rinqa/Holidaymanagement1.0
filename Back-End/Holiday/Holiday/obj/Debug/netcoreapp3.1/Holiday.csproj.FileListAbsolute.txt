@@ -23,3 +23,11 @@ C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\obj\Debug\netc
 C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\obj\Debug\netcoreapp3.1\Holiday.dll
 C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\obj\Debug\netcoreapp3.1\Holiday.pdb
 C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\obj\Debug\netcoreapp3.1\Holiday.genruntimeconfig.cache
+C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Holiday\Holiday\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
