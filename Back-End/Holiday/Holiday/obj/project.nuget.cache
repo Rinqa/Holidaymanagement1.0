@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "y4LSDb4/Ay0FXwfIAUXTikHUJV5xbuRwnunkzTuzBKCPBl2xfLHU8rXkbrAtqz3vdBMVoZ7vhNCcuTxKbaHH6A==",
+  "dgSpecHash": "81cvH1XIj5+T4tHI64oUNo8RlDW3a2HYPX3AFDDVki6aZO+VI2FJvt67hpAMiL9tHKVI6sg+H932x4G67doQ3A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Holiday\\Holiday\\Holiday.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Rinor\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.9\\microsoft.aspnetcore.jsonpatch.3.1.9.nupkg.sha512",
+    "C:\\Users\\Rinor\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.9\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.9.nupkg.sha512",
+    "C:\\Users\\Rinor\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Rinor\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Rinor\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
