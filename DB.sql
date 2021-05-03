@@ -10,31 +10,26 @@ create table Kompania(
 	Passwordi varchar(36),
 	Tel varchar(255)
 );
-
 create table departamenti(
 	Id int identity(1,1)  primary key,
 	DeparatamentiEmri varchar(255),
 	KompaniaId int REFERENCES Kompania(Id),
 	
 );
-
 create table Lokacioni(
 	Id int identity(1,1)  primary key,
 	Lokacioni varchar(255)
 );
-
 create table Ekipi(
 	Id int identity(1,1)  primary key,
 	EkipiEmri varchar(255),
 	LokacioniId int references Lokacioni(Id),
 	DepartamentiId int references Departamenti(Id)
 );
-
 create table Pozitat(
 	Id int identity(1,1)  primary key,
 	Pozita varchar(255)
 );
-
 create table StatusiPuntorit(
 	Id int identity(1,1)  primary key,
 	Statusi varchar(255)
@@ -53,7 +48,6 @@ create table Punetori(
 	Pozita int references Pozitat(Id),
 	EkipiId int references Ekipi(Id), 
 );
-
 create table Dokumentet(
 	Id int identity (1,1)  primary key,
 	Punetori int references Punetori(Id),
@@ -72,7 +66,6 @@ create table FestatZyrtare(
 	DataFillimit date,
 	DataMbarimit date
 );
-
 create table Aplikimet(
 	Id int identity(1,1)  primary key,
 	Pushimi int references Pushimet(Id),
