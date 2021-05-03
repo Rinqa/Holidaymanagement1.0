@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
-using Login.Models;
+using Holiday.Models;
 using System.Data;
 
 namespace Login.Controller
