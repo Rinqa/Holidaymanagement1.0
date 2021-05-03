@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Holiday.Models
 {
-    public class SignUpKompanija
+    public class Kompania
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Ju lutemi shenoni Emrin e Kompanijes")]
