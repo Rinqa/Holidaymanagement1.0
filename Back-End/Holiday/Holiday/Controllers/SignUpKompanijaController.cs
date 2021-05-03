@@ -15,22 +15,22 @@ namespace Holiday.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class SignUpKompanijaController : ControllerBase
+    public class kompKompanijaController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public SignUpKompanijaController(IConfiguration configuration)
+        public kompKompanijaController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
         [HttpPost]
-        public JsonResult Post(SignUpKompanija signup)
+        public JsonResult Post(Kompania komp)
         {
             string query = @"insert into Kompania (Emri,DrejtoriEmri,Email,Passwordi,Tel) values (
-                                            '"+signup.Emri+@"',
-                                            '"+signup.DrejtoriEmri+@"',
-                                            '"+signup.Email+ @"',
-                                            '" + signup.Passwordi+@"',
-                                            '" + signup.Tel + @"'
+                                            '"+komp.Emri+@"',
+                                            '"+komp.DrejtoriEmri+@"',
+                                            '"+komp.Email+ @"',
+                                            '" + komp.Passwordi+@"',
+                                            '" + komp.Tel + @"'
                                             );";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
