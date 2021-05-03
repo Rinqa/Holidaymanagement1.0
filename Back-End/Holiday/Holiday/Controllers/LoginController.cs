@@ -21,13 +21,10 @@ namespace Login.Controller
         {
             _configuration = configuration;
         }
-        [HttpPost]
-        public JsonResult Post(Login log)
+        [HttpGet]
+        public JsonResult Post()
         {
-            string query = @"insert into Login (Emri, Password) values (
-                                            '" + log.Email + @"',
-                                            '" + log.Password + @"',
-                                            );";
+            string query = @"Select Email,Passwordi from Kompania";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
             SqlDataReader myReader;
