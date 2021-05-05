@@ -1,11 +1,10 @@
-import logo from './LogoL.svg';
+
 import './App.css';
 
 import { Navigation } from './Navigation';
 import { LoginKompania } from './LoginKompania';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { RegjisterKompania} from './RegjisterKompania';
-import ReactDOM from "react-dom";
 function App() {
   return (
     <BrowserRouter>

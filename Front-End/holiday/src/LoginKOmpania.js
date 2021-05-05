@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import logo from './LogoL.svg';
-import { Table,Row,Col,Form,Button,Container,label } from 'react-bootstrap';
+import { Row,Col,Form,Button,Container } from 'react-bootstrap';
 export class LoginKompania extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
+    
     render() {
         return (
             

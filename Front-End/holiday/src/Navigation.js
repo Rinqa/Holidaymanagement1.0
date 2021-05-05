@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import logo from './LogoL.svg';
 
@@ -7,9 +6,7 @@ export class Navigation extends Component {
 
     render() {
         return (
-            
-
-<Navbar fluid="md" collapseOnSelect expand="lg" bg="white"   width="100%" variant="light">
+<Navbar  collapseOnSelect expand="lg" bg="white" variant="light">
 <Navbar.Brand href="#home">
       <img
         src="/logo.svg"
