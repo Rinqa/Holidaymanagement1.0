@@ -85,7 +85,13 @@ label {
   color: #222;
   font-weight: lighter;
 }
+.LoginBox{
+  width: 22rem;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 6pc 0 rgba(0,115,230,0.3);
 
+} 
 input {
   padding: 10px 10px;
   border-radius: 5px;
