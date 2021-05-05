@@ -8,8 +8,8 @@ export class Navigation extends Component {
     render() {
         return (
             
-          
-<Navbar collapseOnSelect expand="lg" bg="white" sticky="top" width="100%" variant="light">
+
+<Navbar  collapseOnSelect expand="lg" bg="white"   width="100%" variant="light">
 <Navbar.Brand href="#home">
       <img
         src="/logo.svg"
