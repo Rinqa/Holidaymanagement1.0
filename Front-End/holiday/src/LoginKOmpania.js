@@ -11,7 +11,7 @@ export class LoginKompania extends Component {
             
     <Container>
         <Row>
-            <Col lg={3} className=" m-auto">
+            <Col lg={3} className="p-3 m-auto">
                 <div className="LoginBox p-5">
                     
                     <Form className="mt-3">

@@ -9,7 +9,7 @@ export class Navigation extends Component {
         return (
             
 
-<Navbar  collapseOnSelect expand="lg" bg="white"   width="100%" variant="light">
+<Navbar fluid="md" collapseOnSelect expand="lg" bg="white"   width="100%" variant="light">
 <Navbar.Brand href="#home">
       <img
         src="/logo.svg"
