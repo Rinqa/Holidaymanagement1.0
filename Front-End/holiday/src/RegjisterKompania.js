@@ -150,7 +150,7 @@ export class RegjisterKompania extends Component {
             </div>
             <div className="createAccount">
               <button type="submit">Create Account</button>
-              <small>Already Have an Account? / Back to Login</small>
+              <small>Already Have an Account? /<a href="/LoginKompania"> Back to Login</a></small>
             </div>
           </form>
         </div>
