@@ -2,13 +2,13 @@
 import './App.css';
 
 import { Navigation } from './Navigation';
-import { LoginKompania } from './LoginKompania';
+import { Login } from './Login';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { RegjisterKompania} from './RegjisterKompania';
 function App() {
   return (
     <BrowserRouter>
-    <div className="container">
+    <div className="container-fluid">
       
 
       <Navigation />
@@ -18,7 +18,7 @@ function App() {
         <Route path='/drejtimet'  />
         <Route path='/llojistudimeve'  />
         <Route path='/aplikues'  />
-        <Route path='/LoginKompania' component={LoginKompania}/>
+        <Route path='/Login' component={Login}/>
         <Route path='/RegjisterKompania' component={RegjisterKompania}/>
       </Switch>
     </div>

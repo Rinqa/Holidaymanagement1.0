@@ -23,22 +23,21 @@ create table Pozita(
 create table Kompania(
 	Id int identity(1,1) primary key,
 	Emri varchar(255),
-	Email varchar(255),
-	Passwordi varchar(255),
 );
 create table Departamenti(
 	Id int identity(1,1) primary key,
 	Departamenti varchar(255),
 	Kompania int references Kompania(Id),
 );
+drop table Departamenti
 create table PushimetMarrura(
-	Puntori int references Puntori(Id),
+	Users int references Users(Id),
 	Pushimi int references Pushimet(Id),
 	Ditet int,
 	Viti date,
 
 );
-create table Puntori(
+create table Users(
 	Id int identity(1,1) primary key,
 	Emri varchar(255),
 	Mbimeri varchar(255),
@@ -51,5 +50,25 @@ create table Puntori(
 	Pozita int references Pozita(Id),
 	Departamenti int references Departamenti(Id),
 	PushimVjetor int,
-	DataFillimit date, --dataFillimit ne kompani
+	Viti date, --dataFillimit ne kompani
+	Roli int references Roli(Id),
+);
+create table Roli(
+	Id int identity(1,1) primary key,
+	Roli varchar(100)
+);
+create table FestatZyrtare(
+	Id int identity(1,1) primary key,
+	Festa varchar(100),
+	Dita date,
+);
+
+
+create table Aplikimet(
+	Id int primary key identity(1,1),
+	Users int references Users(Id),
+	Pushimi int references Pushimet(Id),
+	DataFillimit date,
+	DataMbarimit date,
+	Pershkrimi varchar(500),
 );

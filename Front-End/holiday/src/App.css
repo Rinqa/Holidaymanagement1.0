@@ -1,6 +1,14 @@
 .App {
   text-align: center;
 }
+.btn{
+  border: 1px solid blue;
+}
+.btn:hover{
+  border: 1px solid black;
+  background-color:lightgray;
+  color:blue;
+}
 
 .App-logo {
   height: 40vmin;
@@ -86,10 +94,11 @@ label {
   font-weight: lighter;
 }
 .LoginBox{
-  width: 22rem;
+  width: auto;
   height: auto;
-  border-radius: 2px;
-  box-shadow: 0 0 6pc 0 rgba(0,115,230,0.3);
+  border-radius: 2px ;
+  box-shadow: 0 0 7pc 0 rgba(30, 31, 31, 0.3);
+  background-color: whitesmoke;
 
 } 
 input {

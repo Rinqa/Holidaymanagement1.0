@@ -43,7 +43,7 @@ export class Navigation extends Component {
 </Nav>
     </Nav>
     <Nav>
-      <Nav.Link  href="/LoginKompania" >Login</Nav.Link>
+      <Nav.Link  href="/Login" >Login</Nav.Link>
       <Nav.Link eventKey={2} href="#memes">
         Welcome: Admin
       </Nav.Link>
