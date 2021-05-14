@@ -40,7 +40,7 @@ create table PushimetMarrura(
 create table Users(
 	Id int identity(1,1) primary key,
 	Emri varchar(255),
-	Mbimeri varchar(255),
+	Mbiemri varchar(255),
 	Gjinia char(1),
 	NrPersonal int,
 	Tel varchar(30),
