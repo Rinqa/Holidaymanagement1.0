@@ -36,3 +36,5 @@ C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Eleaving\Eleaving\obj\Debug\ne
 C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Eleaving\Eleaving\obj\Debug\netcoreapp3.1\Eleaving.dll
 C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Eleaving\Eleaving\obj\Debug\netcoreapp3.1\Eleaving.pdb
 C:\Users\Rinor\Desktop\Holidaymanagement\Back-End\Eleaving\Eleaving\obj\Debug\netcoreapp3.1\Eleaving.genruntimeconfig.cache
+C:\Users\Plus Computers\Documents\GitHub\Holidaymanagement1.0\Back-End\Eleaving\Eleaving\obj\Debug\netcoreapp3.1\Eleaving.dll
+C:\Users\Plus Computers\Documents\GitHub\Holidaymanagement1.0\Back-End\Eleaving\Eleaving\obj\Debug\netcoreapp3.1\Eleaving.pdb

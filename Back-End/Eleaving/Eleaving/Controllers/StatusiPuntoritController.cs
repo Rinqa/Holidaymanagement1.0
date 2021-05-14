@@ -8,24 +8,26 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Eleaving.Models;
+
 namespace Eleaving.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DepartamentiController : ControllerBase
+    public class StatusiPuntoritController : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
-        public DepartamentiController(IConfiguration configuration)
+        public StatusiPuntoritController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
         [HttpGet]
+
         public JsonResult Get()
         {
             string query = @"
-                    select * from Departamenti";
+                    select Id, Statusi";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
             SqlDataReader myReader;
@@ -35,7 +37,7 @@ namespace Eleaving.Controllers
                 using (SqlCommand myCommand = new SqlCommand(query, myCon))
                 {
                     myReader = myCommand.ExecuteReader();
-                    table.Load(myReader); ;
+                    table.Load(myReader);
 
                     myReader.Close();
                     myCon.Close();
@@ -45,12 +47,12 @@ namespace Eleaving.Controllers
             return new JsonResult(table);
         }
         [HttpPost]
-        public JsonResult Post(Departamentet dep)
+
+        public JsonResult Post(StatusiPuntorit stat)
         {
             string query = @"
-                    insert into Departamenti (Departamenti,Kompania)values 
-                    ('" + dep.Departamenti + @"',
-                    '" + dep.Kompania + @"')
+                    insert into StatusiPuntorit values
+                    ('" + stat.Statusi + @"')
                     ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
@@ -71,12 +73,12 @@ namespace Eleaving.Controllers
             return new JsonResult("Added Successfully");
         }
         [HttpPut]
-        public JsonResult Put(Departamentet dep)
+        public JsonResult Put(StatusiPuntorit stat)
         {
             string query = @"
-                    update Depratamenti set 
-                    Departamenti = '" + dep.Departamenti + @"'
-                    where Id  = " + dep.Id + @" 
+                    update StatusiPuntorit set 
+                    Statusi = '" + stat.Statusi + @"'
+                    where Id  = " + stat.Id + @" 
                     ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
@@ -101,7 +103,7 @@ namespace Eleaving.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-                    delete from Departamenti
+                    delete from StatusiPuntorit
                     where Id = " + id + @" 
                     ";
             DataTable table = new DataTable();

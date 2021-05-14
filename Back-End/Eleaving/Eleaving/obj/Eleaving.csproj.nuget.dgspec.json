@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {}
+    "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {
+    "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+        "projectUniqueName": "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
         "projectName": "Eleaving",
-        "projectPath": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
-        "packagesPath": "C:\\Users\\Rinor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Eleaving\\Eleaving\\obj\\",
+        "projectPath": "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+        "packagesPath": "C:\\Users\\Plus Computers\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Plus Computers\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

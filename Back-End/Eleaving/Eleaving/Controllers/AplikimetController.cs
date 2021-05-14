@@ -8,24 +8,25 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Eleaving.Models;
+
 namespace Eleaving.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DepartamentiController : ControllerBase
+    public class AplikimetController : ControllerBase
     {
         private readonly IConfiguration _configuration;
 
-        public DepartamentiController(IConfiguration configuration)
+        public AplikimetController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
-
         [HttpGet]
+
         public JsonResult Get()
         {
             string query = @"
-                    select * from Departamenti";
+                    select Id, Users, Pushimi, DataFillimit, DataMbarimit, Pershkrimi";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
             SqlDataReader myReader;
@@ -35,7 +36,7 @@ namespace Eleaving.Controllers
                 using (SqlCommand myCommand = new SqlCommand(query, myCon))
                 {
                     myReader = myCommand.ExecuteReader();
-                    table.Load(myReader); ;
+                    table.Load(myReader);
 
                     myReader.Close();
                     myCon.Close();
@@ -44,13 +45,18 @@ namespace Eleaving.Controllers
 
             return new JsonResult(table);
         }
+
         [HttpPost]
-        public JsonResult Post(Departamentet dep)
+
+        public JsonResult Post(Aplikimet apliko)
         {
             string query = @"
-                    insert into Departamenti (Departamenti,Kompania)values 
-                    ('" + dep.Departamenti + @"',
-                    '" + dep.Kompania + @"')
+                    insert into StatusiPuntorit values
+                    ('" + apliko.Users + @"', 
+                     '" + apliko.Pushimi + @"',
+                     '" + apliko.DataFillimit + @"',
+                     '" + apliko.DataMbarimit + @"',
+                     '" + apliko.Pershkrimi + @"')
                     ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
@@ -71,12 +77,17 @@ namespace Eleaving.Controllers
             return new JsonResult("Added Successfully");
         }
         [HttpPut]
-        public JsonResult Put(Departamentet dep)
+        public JsonResult Put(Aplikimet apliko)
         {
             string query = @"
-                    update Depratamenti set 
-                    Departamenti = '" + dep.Departamenti + @"'
-                    where Id  = " + dep.Id + @" 
+                    update Aplikimet set 
+                    Users = '" + apliko.Users + @"',
+                    Pushimi = '" + apliko.Pushimi+ @"',
+                    DataFillimit = '" + apliko.DataFillimit + @"',
+                    DataMbarimit = '" + apliko.DataMbarimit+ @"',
+                    Pershkrimi = '" + apliko.Pershkrimi+ @"',
+                    where Id  = " + apliko.Id + @" 
+                                        
                     ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
@@ -101,7 +112,7 @@ namespace Eleaving.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-                    delete from Departamenti
+                    delete from Aplikimet
                     where Id = " + id + @" 
                     ";
             DataTable table = new DataTable();
