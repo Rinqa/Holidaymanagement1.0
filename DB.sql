@@ -29,7 +29,7 @@ create table Departamenti(
 	Departamenti varchar(255),
 	Kompania int references Kompania(Id),
 );
-drop table Departamenti
+
 create table PushimetMarrura(
 	Users int references Users(Id),
 	Pushimi int references Pushimet(Id),

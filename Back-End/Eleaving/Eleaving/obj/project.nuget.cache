@@ -1,248 +1,58 @@
 {
   "version": 2,
-  "dgSpecHash": "vbkAYc0P7VDfuiQOUu12POJ9Ym6DbzZ3R/3krS1Ks2Cn0K+C4nGVw+CsAil22S3elprCwLUR7RZJHIjXWCBKTw==",
-  "success": false,
-  "projectFilePath": "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+  "dgSpecHash": "+wTEWZsJjjOElVWkiMa3MjQOzSdvZs3t3r2rF+gyvPEe5fVqNGpPOs/rcC6NKVVcdcUbNRZVFyaYd4QoY/n6JA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Plus Computers\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\Plus Computers\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
-    "C:\\Users\\Plus Computers\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
-    "C:\\Users\\Plus Computers\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
-    "C:\\Users\\Plus Computers\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\Plus Computers\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\Plus Computers\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\Plus Computers\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512"
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.7\\microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.9\\microsoft.aspnetcore.jsonpatch.3.1.9.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.9\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.9.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\DION\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": [
     {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.CSharp 4.7.0' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.CSharp"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.CSharp 4.7.0' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "Microsoft.CSharp"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.CSharp 4.7.0' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.CSharp"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.CSharp 4.7.0' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "Microsoft.CSharp"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'runtime.native.System.Data.SqlClient.sni 4.7.0' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "runtime.native.System.Data.SqlClient.sni"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'runtime.native.System.Data.SqlClient.sni 4.7.0' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "runtime.native.System.Data.SqlClient.sni"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'runtime.native.System.Data.SqlClient.sni 4.7.0' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "runtime.native.System.Data.SqlClient.sni"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'runtime.native.System.Data.SqlClient.sni 4.7.0' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "runtime.native.System.Data.SqlClient.sni"
-    },
-    {
-      "code": "NU3037",
+      "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Security.Principal.Windows 4.7.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The author primary signature validity period has expired.",
-      "libraryId": "System.Security.Principal.Windows"
+      "message": "Package 'Microsoft.AspNet.Mvc 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
     },
     {
-      "code": "NU3037",
+      "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Security.Principal.Windows 4.7.0' from source 'C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\': The repository countersignature validity period has expired.",
-      "libraryId": "System.Security.Principal.Windows"
+      "message": "Package 'Microsoft.AspNet.Razor 3.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
     },
     {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.Win32.Registry 4.7.0' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.Win32.Registry"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.Win32.Registry 4.7.0' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "Microsoft.Win32.Registry"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.Win32.Registry 4.7.0' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.Win32.Registry"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.Win32.Registry 4.7.0' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "Microsoft.Win32.Registry"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNetCore.Mvc.NewtonsoftJson 3.1.9' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNetCore.Mvc.NewtonsoftJson 3.1.9' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNetCore.Mvc.NewtonsoftJson 3.1.9' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNetCore.Mvc.NewtonsoftJson 3.1.9' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNetCore.JsonPatch 3.1.9' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNetCore.JsonPatch"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNetCore.JsonPatch 3.1.9' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "Microsoft.AspNetCore.JsonPatch"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNetCore.JsonPatch 3.1.9' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNetCore.JsonPatch"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNetCore.JsonPatch 3.1.9' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "Microsoft.AspNetCore.JsonPatch"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.Razor 3.2.7' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNet.Razor"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.Razor 3.2.7' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "Microsoft.AspNet.Razor"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.Razor 3.2.7' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNet.Razor"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.Razor 3.2.7' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "Microsoft.AspNet.Razor"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNet.WebPages"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "Microsoft.AspNet.WebPages"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNet.WebPages"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "Microsoft.AspNet.WebPages"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.Mvc 5.2.7' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNet.Mvc"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.Mvc 5.2.7' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "Microsoft.AspNet.Mvc"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.Mvc 5.2.7' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "Microsoft.AspNet.Mvc"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'Microsoft.AspNet.Mvc 5.2.7' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "Microsoft.AspNet.Mvc"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'System.Data.SqlClient 4.8.2' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "System.Data.SqlClient"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'System.Data.SqlClient 4.8.2' from source 'https://api.nuget.org/v3/index.json': The author primary signature validity period has expired.",
-      "libraryId": "System.Data.SqlClient"
-    },
-    {
-      "code": "NU3028",
-      "level": "Error",
-      "message": "Package 'System.Data.SqlClient 4.8.2' from source 'https://api.nuget.org/v3/index.json': The repository countersignature's timestamp found a chain building issue: UntrustedRoot: A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.",
-      "libraryId": "System.Data.SqlClient"
-    },
-    {
-      "code": "NU3037",
-      "level": "Error",
-      "message": "Package 'System.Data.SqlClient 4.8.2' from source 'https://api.nuget.org/v3/index.json': The repository countersignature validity period has expired.",
-      "libraryId": "System.Data.SqlClient"
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
     },
     {
       "code": "NU1701",

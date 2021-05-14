@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {}
+    "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {
+    "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+        "projectUniqueName": "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
         "projectName": "Eleaving",
-        "projectPath": "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
-        "packagesPath": "C:\\Users\\Plus Computers\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Plus Computers\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\obj\\",
+        "projectPath": "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+        "packagesPath": "C:\\Users\\DION\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Plus Computers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DION\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
