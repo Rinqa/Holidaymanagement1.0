@@ -1,13 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Eleaving.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
-using Eleaving.Models;
 
 namespace Eleaving.Controllers
 {
@@ -49,7 +44,7 @@ namespace Eleaving.Controllers
 
         [HttpPost]
 
-        public JsonResult Post(Pozita poz)
+        public JsonResult Post(Pozitat poz)
         {
             string query = @"
                     insert into Pozita values
@@ -72,35 +67,36 @@ namespace Eleaving.Controllers
             }
 
             return new JsonResult("Added Successfully");
+        }
+        [HttpPut]
 
-            [HttpPut]
-
-            public JsonResult Put(Pozita poz)
-            {
-                string query = @"
+        public JsonResult Put(Pozitat poz)
+        {
+            string query = @"
                     update Pozita set 
                     Departamenti = '" + poz.Pozita + @"'
                     where Id  = " + poz.Id + @" 
                     ";
-                DataTable table = new DataTable();
-                string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
-                SqlDataReader myReader;
-                using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
                 {
-                    myCon.Open();
-                    using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                    {
-                        myReader = myCommand.ExecuteReader();
-                        table.Load(myReader); ;
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader); ;
 
-                        myReader.Close();
-                        myCon.Close();
-                    }
+                    myReader.Close();
+                    myCon.Close();
                 }
-
             }
             return new JsonResult("Updated Successfully");
+
         }
+
+
 
         [HttpDelete("{id}")]
         public JsonResult Delete(int id)

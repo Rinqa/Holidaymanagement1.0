@@ -50,7 +50,7 @@ namespace Eleaving.Controllers
             string query = @"
                     insert into Departamenti (Departamenti,Kompania)values 
                     ('" + dep.Departamenti + @"',
-                    '" + dep.Kompania + @"'),
+                    '" + dep.Kompania + @"')
                     ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");

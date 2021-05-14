@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Eleaving.Models
 {
-    public class Pozita
+    public class Pozitat
     {
         public int Id { get; set; }
-        public string poz { get; set; }
+        public string Pozita { get; set; }
     }
 }
