@@ -13,7 +13,7 @@ insert into statusiPuntorit values ('Part Time')
 insert into statusiPuntorit values ('Contract')
 
 insert into Pozita values ('Full Stack') 
-insert into Pozita values ('Back Stack') 
+insert into Pozita values ('Back End') 
 insert into Pozita values ('Front End')
 insert into Pozita values ('Intern')
 insert into Pozita values ('Administrat')
