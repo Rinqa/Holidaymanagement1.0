@@ -9,6 +9,6 @@ namespace Eleaving.Models
     {
         public int Id { get; set; }
         public string Departamenti { get; set; }
-        public int Kompania { get; set; }
+        public string Kompania { get; set; }
     }
 }

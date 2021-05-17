@@ -9,7 +9,7 @@ create table KategoriaPushimit(
 create table Pushimet(
 	Id int identity(1,1) primary key,
 	Pushimi varchar(255),
-	Kategoria int references KategoriaPushimit(Id),
+	Kategoria varchar(255),
 );
 create table statusiPuntorit(
 	Id int identity(1,1) primary key,
@@ -27,12 +27,12 @@ create table Kompania(
 create table Departamenti(
 	Id int identity(1,1) primary key,
 	Departamenti varchar(255),
-	Kompania int references Kompania(Id),
+	Kompania varchar(255),
 );
 
 create table PushimetMarrura(
-	Users int references Users(Id),
-	Pushimi int references Pushimet(Id),
+	Users varchar(255),
+	Pushimi varchar(255),
 	Ditet int,
 	Viti date,
 
@@ -46,12 +46,13 @@ create table Users(
 	Tel varchar(30),
 	Email varchar(255),
 	Passwordi varchar(32),
-	Statusi int references statusiPuntorit(Id),
-	Pozita int references Pozita(Id),
-	Departamenti int references Departamenti(Id),
+	Statusi varchar(255),
+	Pozita varchar(255),
+	Departamenti varchar(255),
 	PushimVjetor int,
 	Viti date, --dataFillimit ne kompani
-	Roli int references Roli(Id),
+	Roli varchar(100),
+	profili varchar(255),
 );
 create table Roli(
 	Id int identity(1,1) primary key,
@@ -66,8 +67,8 @@ create table FestatZyrtare(
 
 create table Aplikimet(
 	Id int primary key identity(1,1),
-	Users int references Users(Id),
-	Pushimi int references Pushimet(Id),
+	Users varchar(255),
+	Pushimi varchar(255),
 	DataFillimit date,
 	DataMbarimit date,
 	Pershkrimi varchar(500),

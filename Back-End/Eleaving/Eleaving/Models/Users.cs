@@ -15,11 +15,12 @@ namespace Eleaving.Models
         public string Tel { get; set; }
         public string Email { get; set; }
         public string Passwordi { get; set; }
-        public int Statusi { get; set; }
-        public int Pozita { get; set; }
-        public int Depratamenti { get; set; }
+        public string Statusi { get; set; }
+        public string Pozita { get; set; }
+        public string Depratamenti { get; set; }
         public int PushimiVjetor { get; set; }
         public string Viti { get; set; }
-        public int Roli { get; set; }
+        public string Roli { get; set; }
+        public string Profili { get; set; }
     }
 }

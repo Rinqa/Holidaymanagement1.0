@@ -44,7 +44,7 @@ namespace Eleaving.Controllers
         [HttpPost]
         public JsonResult Post(Users u)
         {
-            string query = @"insert into Users (Emri,Mbiemri,Gjinia,NrPersonal,Tel,Email,Passwordi,Statusi,Pozita,Departamenti,PushimiVjetor,Viti,Roli)values (
+            string query = @"insert into Users (Emri,Mbiemri,Gjinia,NrPersonal,Tel,Email,Passwordi,Statusi,Pozita,Departamenti,PushimiVjetor,Viti,Roli,Profili)values (
               '" + u.Emri + @"',
               '" + u.Mbiemri + @"',
               '" + u.Gjinia + @"',
@@ -57,7 +57,8 @@ namespace Eleaving.Controllers
               '" + u.Depratamenti + @"',
               '" + u.PushimiVjetor + @"',
               '" + u.Viti + @"',
-              '" + u.Roli + @"' 
+              '" + u.Roli + @"',
+               '"+u.Profili+@"',
             )";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
@@ -94,6 +95,7 @@ namespace Eleaving.Controllers
                     PushimVjetor = '" + u.PushimiVjetor+ @"',
                     Viti = '" + u.Viti+ @"',
                     Roli = '" + u.Roli+ @"',
+                    Profili= '"+u.Profili+@"',
                     where Id  = " + u.Id + @" 
                     ";
             DataTable table = new DataTable();

@@ -9,9 +9,9 @@ namespace Eleaving.Models
     {
         public int Id { get; set; }
 
-        public int Users { get; set; }
+        public string Users { get; set; }
 
-        public int Pushimi { get; set; }
+        public string Pushimi { get; set; }
 
         public string DataFillimit { get; set; }
 

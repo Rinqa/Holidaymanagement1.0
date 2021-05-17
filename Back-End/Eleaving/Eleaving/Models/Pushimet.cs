@@ -9,7 +9,7 @@ namespace Eleaving.Models
     {
         public int Id { get; set; }
         public string Pushimi { get; set; }
-        public int Kategoria { get; set; }
+        public string Kategoria { get; set; }
 
     }
 }

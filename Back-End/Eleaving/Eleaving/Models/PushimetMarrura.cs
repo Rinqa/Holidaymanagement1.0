@@ -7,8 +7,8 @@ namespace Eleaving.Models
 {
     public class PushimetMarrura
     {
-        public int Users { get; set; }
-        public int Pushimi { get; set; }
+        public string Users { get; set; }
+        public string Pushimi { get; set; }
         public int Ditet { get; set; }
         public string Viti { get; set; }
     }
