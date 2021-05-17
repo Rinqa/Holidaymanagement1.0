@@ -777,19 +777,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DION\\.nuget\\packages\\": {}
+    "C:\\Users\\Rinor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+      "projectUniqueName": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
       "projectName": "Eleaving",
-      "projectPath": "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
-      "packagesPath": "C:\\Users\\DION\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DION\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\obj\\",
+      "projectPath": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+      "packagesPath": "C:\\Users\\Rinor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement\\Back-End\\Eleaving\\Eleaving\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DION\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -846,7 +846,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   },
