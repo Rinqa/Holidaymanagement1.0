@@ -17,7 +17,7 @@ namespace Eleaving.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            string query = @"select * from FestatZyrtare";
+            string query = @"select Id,Festa ,convert(varchar(10),Dita,120)as Dita from FestatZyrtare";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
             SqlDataReader myReader;
