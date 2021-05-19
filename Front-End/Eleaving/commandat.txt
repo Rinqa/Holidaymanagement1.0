@@ -1,2 +1,0 @@
-npm i react-admin
-npm i ra-data-simple-rest
