@@ -37,6 +37,7 @@ export class Pushimet extends Component {
                             <th>ID</th>
                             <th>Pushimi</th>
                             <th>Kategoria</th>
+                            <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,7 +46,12 @@ export class Pushimet extends Component {
                             <td>{us.Id}</td>
                             <td>{us.Pushimi}</td>
                             <td>{us.Kategoria}</td>
+                            <td>
+                                <Button className="btn"><i className="fa fa-pencil"></i></Button>
+                                <Button className="btn-danger"><i className="fa fa-trash"></i></Button>
+                            </td>
                             </tr>
+                            
                         )}
                     </tbody>
                 </Table>

@@ -35,11 +35,12 @@ export class Users extends Component {
                     <Row>
                              
                         {user.map(us =>
-                            <Card key={us.Id } style={{ width: '18rem' }}>
+                            <Card key={us.Id } style={{ width: '18rem' }} className="us">
                                 <Card.Img variant="top" src="https://thispersondoesnotexist.com/image"/>
                                 <Card.Body>
                                 <Card.Title>{us.Emri} {us.Mbiemri}</Card.Title>
                                 <Card.Text><a href="#"><i className="fa fa-mail-forward"></i></a>{us.Email}  </Card.Text>
+                                <Card.Text>Departamenti: {us.Departamenti}</Card.Text>
                                 <Card.Text><i className="fa fa-phone"></i> {us.Tel}</Card.Text>
                                 </Card.Body>
                             </Card>
