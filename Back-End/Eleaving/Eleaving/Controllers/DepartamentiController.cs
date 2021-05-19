@@ -74,7 +74,7 @@ namespace Eleaving.Controllers
         public JsonResult Put(Departamentet dep)
         {
             string query = @"
-                    update Depratamenti set 
+                    update Departamenti set 
                     Departamenti = '" + dep.Departamenti + @"'
                     where Id  = " + dep.Id + @" 
                     ";

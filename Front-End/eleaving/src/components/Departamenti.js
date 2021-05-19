@@ -1,11 +1,11 @@
 import { CardHeader, Container } from '@material-ui/core';
 import React from 'react'
 
-
 import { Component } from 'react'
 import { Table, Card, Col, Row } from 'react-bootstrap';
 import { Button, ButtonToolbar } from 'react-bootstrap';
-
+import { AddDepModal } from './Add/AddDepModal';
+import { EditDepModal } from './Edit/EditDepModal';
 
 export class Departamenti extends Component {
     constructor(props) {
@@ -25,30 +25,69 @@ export class Departamenti extends Component {
     componentDidUpdate() {
         this.refreshList();
     }
-
+    deleteDep(depid) {
+        if (window.confirm('Are you sure?')) {
+            fetch(process.env.REACT_APP_API + 'Departamenti/' + depid, {
+                method: 'DELETE',
+                header: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
+    }
     render() {
-        const { dep } = this.state;
-
+        const { dep, idep, depsn, kom } = this.state;
+        let addModalClose = () => this.setState({ addModalShow: false });
+        let editModalClose = () => this.setState({ editModalShow: false });
         return (
             <div >
+                <ButtonToolbar className="justify-content-right">
+                    <Button variant='primary'
+                        onClick={() => this.setState({ addModalShow: true })}>
+                        Add Department</Button>
+
+                    <AddDepModal show={this.state.addModalShow}
+                        onHide={addModalClose} />
+                </ButtonToolbar>
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Departamenti</th>
                             <th>Kompania</th>
+                            <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>
                         {dep.map(us =>
                             <tr key={us.Id}>
-                            <td>{us.Id}</td>
-                            <td>{us.Departamenti}</td>
-                            <td>{us.Kompania}</td>
+                                <td>{us.Id}</td>
+                                <td>{us.Departamenti}</td>
+                                <td>{us.Kompania}</td>
+                                <td>
+                                    <Button className="mr-2" variant="primary"
+                                        onClick={() => this.setState({
+                                            editModalShow: true,
+                                            idep: us.Id, depsn: us.Departamenti, kom: us.Kompania
+                                        })}>
+                                        <i className="fa fa-pencil"></i>
+                                    </Button>
+                                    <Button className="mr-2" variant="danger"
+                                        onClick={() => this.deleteDep(us.Id)}>
+                                        <i className="fa fa-trash"></i>
+                                     </Button>
+                                    <EditDepModal show={this.state.editModalShow}
+                                        onHide={editModalClose}
+                                        idep={idep}
+                                        depsn={depsn} 
+                                        kom={kom}/>
+                                </td>
                             </tr>
                         )}
                     </tbody>
                 </Table>
+                
             </div>
 
 

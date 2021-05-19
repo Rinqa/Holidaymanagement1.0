@@ -26,7 +26,7 @@ namespace Eleaving.Controllers
         public JsonResult Get()
         {
             string query = @"
-                    select Id, Users, Pushimi, DataFillimit, DataMbarimit, Pershkrimi";
+                    select Id, Users, Pushimi,convert(varchar(10),DataFillimit,120) as DataFillimit, convert(varchar(10),DataMbarimit,120) as DataMbarimit, Pershkrimi from Aplikimet";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
             SqlDataReader myReader;
