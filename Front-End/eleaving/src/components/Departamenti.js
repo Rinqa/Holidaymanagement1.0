@@ -42,14 +42,16 @@ export class Departamenti extends Component {
         let editModalClose = () => this.setState({ editModalShow: false });
         return (
             <div >
-                <ButtonToolbar className="justify-content-right">
-                    <Button variant='primary'
-                        onClick={() => this.setState({ addModalShow: true })}>
-                        Add Department</Button>
+                <div className="right">
+                    <ButtonToolbar className="justify-content-right">
+                        <Button variant='primary'
+                            onClick={() => this.setState({ addModalShow: true })}>
+                            Add Department</Button>
 
-                    <AddDepModal show={this.state.addModalShow}
-                        onHide={addModalClose} />
-                </ButtonToolbar>
+                        <AddDepModal show={this.state.addModalShow}
+                            onHide={addModalClose} />
+                    </ButtonToolbar>
+                </div>
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
@@ -76,18 +78,18 @@ export class Departamenti extends Component {
                                     <Button className="mr-2" variant="danger"
                                         onClick={() => this.deleteDep(us.Id)}>
                                         <i className="fa fa-trash"></i>
-                                     </Button>
+                                    </Button>
                                     <EditDepModal show={this.state.editModalShow}
                                         onHide={editModalClose}
                                         idep={idep}
-                                        depsn={depsn} 
-                                        kom={kom}/>
+                                        depsn={depsn}
+                                        kom={kom} />
                                 </td>
                             </tr>
                         )}
                     </tbody>
                 </Table>
-                
+
             </div>
 
 
