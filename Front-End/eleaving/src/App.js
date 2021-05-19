@@ -5,6 +5,14 @@ import Users from './components/Users'
 import Pushimet from './components/Pushimet'
 import Departamenti from './components/Departamenti'
 import Aplikimet from './components/Aplikimet'
+import FestatZyrtare from './components/Festatzyrtare'
+import Kompania from './components/Kompania'
+import Pozitat from './components/Pozitat'
+import Roli from './components/Roli'
+import PushimetM from './components/PushimetM'
+import StatPuntori from './components/StatusiPuntorit'
+import KatPushimit from './components/kategoriaPushimit'
+
 function App() {
   return (
     <Admin dataProvider={restProvider('http://localhost:3000/admin')}>
@@ -12,13 +20,13 @@ function App() {
       <Resource name="Pushimet" list={Pushimet}></Resource>
       <Resource name="Departamentet" list={Departamenti}></Resource>
       <Resource name="Aplikimet" list={Aplikimet}></Resource>
-      <Resource name="Festat Zyrtare" list={Pushimet}></Resource>
-      <Resource name="Kompania" list={Pushimet}></Resource>
-      <Resource name="Pozitat" list={Pushimet}></Resource>
-      <Resource name="Roli" list={Pushimet}></Resource>
-      <Resource name="Pushimet e marrura" list={Pushimet}></Resource>
-      <Resource name="Statusi Puntorit" list={Pushimet}></Resource>
-      <Resource name="Kategorit e Pushimeve" list={Pushimet}></Resource>
+      <Resource name="Festat Zyrtare" list={FestatZyrtare}></Resource>
+      <Resource name="Kompania" list={Kompania}></Resource>
+      <Resource name="Pozitat" list={Pozitat}></Resource>
+      <Resource name="Roli" list={Roli}></Resource>
+      <Resource name="Pushimet e marrura" list={PushimetM}></Resource>
+      <Resource name="Statusi Puntorit" list={StatPuntori}></Resource>
+      <Resource name="Kategorit e Pushimeve" list={KatPushimit}></Resource>
     </Admin>
   );
 }
