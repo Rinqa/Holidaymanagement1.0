@@ -12,10 +12,11 @@ import Roli from './components/Roli'
 import PushimetM from './components/PushimetM'
 import StatPuntori from './components/StatusiPuntorit'
 import KatPushimit from './components/kategoriaPushimit'
+import google from './googleApi'
 
 function App() {
   return (
-    <Admin dataProvider={restProvider('http://localhost:3000/admin')}>
+    <Admin dataProvider={restProvider('http://localhost:3000')}>
       <Resource name="users" list={Users}></Resource>
       <Resource name="Pushimet" list={Pushimet}></Resource>
       <Resource name="Departamentet" list={Departamenti}></Resource>
@@ -27,6 +28,7 @@ function App() {
       <Resource name="Pushimet e marrura" list={PushimetM}></Resource>
       <Resource name="Statusi Puntorit" list={StatPuntori}></Resource>
       <Resource name="Kategorit e Pushimeve" list={KatPushimit}></Resource>
+      <Resource name="Login with gooogle" list={google}></Resource>
     </Admin>
   );
 }

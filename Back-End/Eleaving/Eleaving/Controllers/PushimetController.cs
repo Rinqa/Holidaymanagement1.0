@@ -76,7 +76,7 @@ namespace Eleaving.Controllers
             string query = @"
                     update Pushimet set 
                     Pushimi = '" + pu.Pushimi + @"',
-                    Kategoria = '" + pu.Kategoria + @"',
+                    Kategoria = '" + pu.Kategoria + @"'
                     where Id  = " + pu.Id + @" 
                     ";
             DataTable table = new DataTable();

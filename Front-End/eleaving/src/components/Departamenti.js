@@ -37,7 +37,7 @@ export class Departamenti extends Component {
         }
     }
     render() {
-        const { dep, idep, depsn, kom } = this.state;
+        const { dep, idep, depsn,  } = this.state;
         let addModalClose = () => this.setState({ addModalShow: false });
         let editModalClose = () => this.setState({ editModalShow: false });
         return (
@@ -71,7 +71,7 @@ export class Departamenti extends Component {
                                     <Button className="mr-2" variant="primary"
                                         onClick={() => this.setState({
                                             editModalShow: true,
-                                            idep: us.Id, depsn: us.Departamenti, kom: us.Kompania
+                                            idep: us.Id, depsn: us.Departamenti
                                         })}>
                                         <i className="fa fa-pencil"></i>
                                     </Button>
@@ -83,12 +83,13 @@ export class Departamenti extends Component {
                                         onHide={editModalClose}
                                         idep={idep}
                                         depsn={depsn}
-                                        kom={kom} />
+                                       />
                                 </td>
                             </tr>
                         )}
                     </tbody>
                 </Table>
+                
 
             </div>
 
