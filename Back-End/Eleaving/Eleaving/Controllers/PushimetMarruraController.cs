@@ -22,7 +22,7 @@ namespace Eleaving.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            string query = @"select * from PushimetMarrura";
+            string query = @"select Users,Pushimi,Ditet,convert(varchar(10),Viti,120)as Viti from PushimetMarrura";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
             SqlDataReader myReader;
