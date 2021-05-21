@@ -64,7 +64,8 @@ namespace Eleaving.Controllers
         {
             string query = @"
                     update FestatZyrtare set 
-                    Festa = '" + fz.Festa + @"'
+                    Festa = '" + fz.Festa + @"',
+                    Dita = '" + fz.Dita + @"'
                     where Id  = " + fz.Id + @" 
                     ";
             DataTable table = new DataTable();
@@ -81,7 +82,7 @@ namespace Eleaving.Controllers
                     myCon.Close();
                 }
             }
-            return new JsonResult("Added successfully");
+            return new JsonResult("Update successfully");
         }
         [HttpDelete("{id}")]
         public JsonResult Delete(int id)

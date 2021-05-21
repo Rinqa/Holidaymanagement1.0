@@ -51,7 +51,7 @@ namespace Eleaving.Controllers
         public JsonResult Post(Aplikimet apliko)
         {
             string query = @"
-                    insert into StatusiPuntorit values
+                    insert into Aplikimet values
                     ('" + apliko.Users + @"', 
                      '" + apliko.Pushimi + @"',
                      '" + apliko.DataFillimit + @"',
@@ -85,7 +85,7 @@ namespace Eleaving.Controllers
                     Pushimi = '" + apliko.Pushimi+ @"',
                     DataFillimit = '" + apliko.DataFillimit + @"',
                     DataMbarimit = '" + apliko.DataMbarimit+ @"',
-                    Pershkrimi = '" + apliko.Pershkrimi+ @"',
+                    Pershkrimi = '" + apliko.Pershkrimi+ @"'
                     where Id  = " + apliko.Id + @" 
                                         
                     ";
