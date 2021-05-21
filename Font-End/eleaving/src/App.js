@@ -13,7 +13,6 @@ import PushimetM from './components/PushimeteMarrura'
 import StatPuntori from './components/StatusiPuntorit'
 import KatPushimit from './components/kategoriaPushimit'
 import google from './googleApi'
-
 function App() {
   return (
     <Admin dataProvider={restProvider('http://localhost:3000')}>
@@ -29,6 +28,7 @@ function App() {
       <Resource name="Statusi Puntorit" list={StatPuntori}></Resource>
       <Resource name="Kategorit e Pushimeve" list={KatPushimit}></Resource>
       <Resource name="Login with gooogle" list={google}></Resource>
+      
     </Admin>
   );
 }
