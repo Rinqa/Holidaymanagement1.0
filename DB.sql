@@ -9,7 +9,7 @@ create table KategoriaPushimit(
 create table Pushimet(
 	Id int identity(1,1) primary key,
 	Pushimi varchar(255),
-	Kategoria varchar(255),
+	Kategoria varchar(255)
 );
 create table statusiPuntorit(
 	Id int identity(1,1) primary key,
