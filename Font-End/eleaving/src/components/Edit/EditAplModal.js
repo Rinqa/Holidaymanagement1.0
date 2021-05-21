@@ -24,7 +24,7 @@ export class EditAplModal extends Component {
             },
             body: JSON.stringify({
                 Id: event.target.Id.value,
-                Users: event.target.Users.value,
+                IdUser: event.target.IdUser.value,
                 Pushimi: event.target.Pushimi.value,
                 DataFillimit: event.target.DataFillimit.value,
                 DataMbarimit: event.target.DataMbarimit.value,
@@ -67,7 +67,7 @@ export class EditAplModal extends Component {
                                             placeholder="Aplikimet" />
                                     </Form.Group>
 
-                                    <Form.Group controlId="Users">
+                                    <Form.Group controlId="IdUser">
                                         <Form.Label>Useri</Form.Label>
                                         <Form.Control type="text" name="User" required
                                             defaultValue={this.props.idU}

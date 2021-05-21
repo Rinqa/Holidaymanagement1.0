@@ -56,7 +56,7 @@ export class Aplikimet extends Component {
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Users</th>
+                            <th>IdUser</th>
                             <th>Pushimi</th>
                             <th>DataFillimit</th>
                             <th>DataMbarimit</th>
@@ -68,7 +68,7 @@ export class Aplikimet extends Component {
                         {dep.map(us =>
                             <tr key={us.Id}>
                                 <td>{us.Id}</td>
-                                <td>{us.Users}</td>
+                                <td>{us.IdUser}</td>
                                 <td>{us.Pushimi}</td>
                                 <td>{us.DataFillimit}</td>
                                 <td>{us.DataMbarimit}</td>
@@ -78,7 +78,7 @@ export class Aplikimet extends Component {
                                     <Button className="mr-2" variant="primary"
                                         onClick={() => this.setState({
                                             editModalShow: true,
-                                            id:us.Id,idU: us.Users, pu: us.Pushimi,df:us.DataFillimit,dm:us.DataMbarimit,pr:us.Pershkrimi
+                                            id:us.Id,idU: us.IdUser, pu: us.Pushimi,df:us.DataFillimit,dm:us.DataMbarimit,pr:us.Pershkrimi
                                         })}>
                                         <i className="fa fa-pencil"></i>
                                     </Button>
