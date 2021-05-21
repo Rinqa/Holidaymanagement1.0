@@ -74,7 +74,7 @@ namespace Eleaving.Controllers
         {
             string query = @"
                     update Pozita set 
-                    Departamenti = '" + poz.Pozita + @"'
+                    Pozita= '" + poz.Pozita + @"'
                     where Id  = " + poz.Id + @" 
                     ";
             DataTable table = new DataTable();

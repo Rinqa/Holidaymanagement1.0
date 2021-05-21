@@ -17,15 +17,15 @@ export class AddPozModal extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        fetch(process.env.REACT_APP_API + 'Pozitat', {
+        fetch(process.env.REACT_APP_API + 'Pozita', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                Pozita: event.target.Users.value,
-                
+                Pozita: event.target.Pozita.value,
+
             })
         })
             .then(res => res.json())
@@ -54,60 +54,17 @@ export class AddPozModal extends Component {
                     <Modal.Body>
 
                         <Row>
-                        <Col sm={6}>
+                            <Col sm={6}>
                                 <Form onSubmit={this.handleSubmit}>
-                                    <Form.Group controlId="Id">
-                                        <Form.Label>AplikimiId</Form.Label>
-                                        <Form.Control type="text" name="AplikimiId" required
-                                            disabled
-                                            defaultValue={this.props.id}
-                                            placeholder="Aplikimet" />
-                                    </Form.Group>
 
-                                    <Form.Group controlId="Users">
+
+                                    <Form.Group controlId="Pozita">
                                         <Form.Label>Useri</Form.Label>
-                                        <Form.Control type="text" name="User" required
-                                            defaultValue={this.props.idU}
-                                            placeholder="Useri" />
-                                    </Form.Group>
-                                    <Form.Group controlId="Pushimi">
-                                        <Form.Label>Pushimi</Form.Label>
-                                        <Form.Control as="select" defaultValue={this.props.pu}>
-                                            {this.state.push.map(com =>
-                                                <option key={com.Id}>{com.Pushimi}</option>)}
+                                        <Form.Control type="text" name="Pozita" required
 
-                                        </Form.Control>
+                                            placeholder="Pozita" />
                                     </Form.Group>
-                                    <Form.Group controlId="DataFillimit">
-                                        <Form.Label>DataFillimit</Form.Label>
-                                        <Form.Control
-                                            type="date"
-                                            name="DataFillimit"
-                                            required
-                                            placeholder="DataFillimit"
-                                            defaultValue={this.props.df}
-                                        />
 
-
-                                    </Form.Group>
-                                    <Form.Group controlId="DataMbarimit">
-                                        <Form.Label>DataMbarimit</Form.Label>
-                                        <Form.Control
-                                            type="date"
-                                            name="DataMbarimit"
-                                            required
-                                            placeholder="DataMbarimit"
-                                            defaultValue={this.props.dm}
-                                        />
-
-
-                                    </Form.Group>
-                                    <Form.Group controlId="Pershkrimi">
-                                        <Form.Label>Pershkrimi</Form.Label>
-                                        <Form.Control type="text" name="Perskrimi" required
-                                            defaultValue={this.props.pr}
-                                            placeholder="Useri" />
-                                    </Form.Group>
 
                                     <Form.Group>
                                         <Button variant="primary" type="submit">
@@ -116,7 +73,7 @@ export class AddPozModal extends Component {
                                     </Form.Group>
                                 </Form>
                             </Col>
-                            </Row>
+                        </Row>
                     </Modal.Body>
 
                     <Modal.Footer>

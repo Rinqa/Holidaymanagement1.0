@@ -4,9 +4,8 @@ import React from 'react'
 import { Component } from 'react'
 import { Table} from 'react-bootstrap';
 import { Button, ButtonToolbar } from 'react-bootstrap';
-// import { AddDepModal } from './Add/AddDepModal';
-// import { EditDepModal } from './Edit/EditDepModal';
-
+import {AddPozModal} from './Add/AddPozModal'
+import {EditPozModal} from './Edit/EditPozModal'
 export class Pozitat extends Component {
     constructor(props) {
         super(props)
@@ -37,7 +36,7 @@ export class Pozitat extends Component {
         }
     }
     render() {
-        const { dep, idep, depsn,  } = this.state;
+        const { dep, id,poz  } = this.state;
         let addModalClose = () => this.setState({ addModalShow: false });
         let editModalClose = () => this.setState({ editModalShow: false });
         return (
@@ -48,8 +47,8 @@ export class Pozitat extends Component {
                             onClick={() => this.setState({ addModalShow: true })}>
                             Add Pozita</Button>
 
-                        {/* <AddDepModal show={this.state.addModalShow}
-                            onHide={addModalClose} /> */}
+                        <AddPozModal show={this.state.addModalShow}
+                            onHide={addModalClose} />
                     </ButtonToolbar>
                 </div>
                 <Table className="mt-4" striped bordered hover size="sm">
@@ -71,7 +70,7 @@ export class Pozitat extends Component {
                                     <Button className="mr-2" variant="primary"
                                         onClick={() => this.setState({
                                             editModalShow: true,
-                                            idep: us.Id, depsn: us.Departamenti
+                                            id: us.Id, poz: us.Pozita
                                         })}>
                                         <i className="fa fa-pencil"></i>
                                     </Button>
@@ -79,11 +78,11 @@ export class Pozitat extends Component {
                                         onClick={() => this.deleteDep(us.Id)}>
                                         <i className="fa fa-trash"></i>
                                     </Button>
-                                    {/* <EditDepModal show={this.state.editModalShow}
+                                    <EditPozModal show={this.state.editModalShow}
                                         onHide={editModalClose}
-                                        idep={idep}
-                                        depsn={depsn}
-                                       /> */}
+                                        id={id}
+                                        poz={poz}
+                                       />
                                 </td>
                             </tr>
                         )}
