@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 
-export class AddAplModal extends Component {
+export class AddPozModal extends Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = { push: [] };
     }
     componentDidMount() {
-        fetch(process.env.REACT_APP_API + "Pushimet")
+        fetch(process.env.REACT_APP_API + "Pozita")
             .then(response => response.json())
             .then(data => {
                 this.setState({ push: data })
@@ -17,18 +17,15 @@ export class AddAplModal extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        fetch(process.env.REACT_APP_API + 'Aplikimet', {
+        fetch(process.env.REACT_APP_API + 'Pozitat', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                IdUser: event.target.IdUser.value,
-                Pushimi: event.target.Pushimi.value,
-                DataFillimit: event.target.DataFillimit.value,
-                DataMbarimit: event.target.DataMbarimit.value,
-                Pershkrimi: event.target.Pershkrimi.value,
+                Pozita: event.target.Users.value,
+                
             })
         })
             .then(res => res.json())
@@ -67,7 +64,7 @@ export class AddAplModal extends Component {
                                             placeholder="Aplikimet" />
                                     </Form.Group>
 
-                                    <Form.Group controlId="IdUser">
+                                    <Form.Group controlId="Users">
                                         <Form.Label>Useri</Form.Label>
                                         <Form.Control type="text" name="User" required
                                             defaultValue={this.props.idU}

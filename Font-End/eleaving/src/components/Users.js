@@ -4,7 +4,7 @@ import React from 'react'
 
 import { Component } from 'react'
 import { Card, Row, Button } from 'react-bootstrap';
-
+import {EditUserModal} from './Edit/EditUserModal'
 
 export class Users extends Component {
 
@@ -48,7 +48,15 @@ export class Users extends Component {
                                     <Card.Footer><Button className="btn btn-block" onClick={() => this.setState({
                                         editModalShow: true,
                                         idep: us.Id, depsn: us.Departamenti
-                                    })}>Edit/Show</Button></Card.Footer>
+                                    })}>Edit/Show</Button>
+                                    
+                                    <EditUserModal show={this.state.editModalShow}
+                                        onHide={editModalClose}
+                                    
+                                    />
+                                        
+                                    
+                                    </Card.Footer>
                                 </Card.Body>
                             </Card>
 

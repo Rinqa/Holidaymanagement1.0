@@ -27,7 +27,7 @@ namespace Eleaving.Controllers
         public JsonResult Get()
         {
             string query = @"
-                    select Id, Statusi";
+                    select Id, Statusi from statusiPuntorit";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
             SqlDataReader myReader;
