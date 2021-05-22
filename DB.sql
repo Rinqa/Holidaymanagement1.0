@@ -67,7 +67,7 @@ create table FestatZyrtare(
 
 create table Aplikimet(
 	Id int primary key identity(1,1),
-	Users int references Users(Id),
+	IdUser int,
 	Pushimi varchar(255),
 	DataFillimit date,
 	DataMbarimit date,
