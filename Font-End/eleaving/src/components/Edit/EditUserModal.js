@@ -123,7 +123,7 @@ export class EditUserModal extends Component {
                                     <Form.Group controlId="Email">
                                         <Form.Label>Email</Form.Label>
                                         <Form.Control type="email" name="Email" required
-                                            defaultValue={this.props.em}
+                                            defaultValue={this.props.eml}
                                             placeholder="Email" />
                                     </Form.Group>
                                     <Form.Group controlId="Passwordi">
@@ -134,14 +134,14 @@ export class EditUserModal extends Component {
                                     </Form.Group>
                                     <Form.Group controlId="Statusi">
                                         <Form.Label>Statusi</Form.Label>
-                                        <Form.Control as="select" defaultValue={this.props.stat} >
+                                        <Form.Control as="select" defaultValue={this.props.st} >
                                             {this.state.stat.map(com =>
                                                 <option key={com.Id}>{com.Statusi}</option>)}
                                         </Form.Control>
                                     </Form.Group>
                                     <Form.Group controlId="Pozita">
                                         <Form.Label>Pozita</Form.Label>
-                                        <Form.Control as="select" defaultValue={this.props.poz} >
+                                        <Form.Control as="select" defaultValue={this.props.pz} >
                                             {this.state.poz.map(com =>
                                                 <option key={com.Id}>{com.Statusi}</option>)}
                                         </Form.Control>
