@@ -27,7 +27,7 @@ export class Users extends Component {
     }
 
     render() {
-        const { user, id,em,mb,gj,np,tl,eml,ps,st,pz,dp,pv,vt,rl } = this.state;
+        const { user, id,em,mb,gj,np,tl,eml,ps,st,pz,dp,pv,vt,rl,pr } = this.state;
         console.log(user);
         let addModalClose = () => this.setState({ addModalShow: false });
         let editModalClose = () => this.setState({ editModalShow: false });
@@ -44,6 +44,7 @@ export class Users extends Component {
                                     <Card.Title>{us.Emri} {us.Mbiemri}</Card.Title>
                                     <Card.Text><i className="fa fa-mail-forward"></i>{us.Email}  </Card.Text>
                                     <Card.Text>Departamenti: {us.Departamenti}</Card.Text>
+                                    <Card.Text>Satusi: {us.Statusi}</Card.Text>
                                     <Card.Text><i className="fa fa-phone"></i> {us.Tel}</Card.Text>
                                     <Card.Footer><Button className="btn btn-block" onClick={() => this.setState({
                                         editModalShow: true,
@@ -60,7 +61,8 @@ export class Users extends Component {
                                         dp:us.Departamenti,
                                         pv:us.PushumVjetor,
                                         vt:us.Viti,
-                                        rl:us.Roli
+                                        rl:us.Roli,
+                                        pr:us.profili
                                     })}>Edit/Show</Button>
                                     
                                     <EditUserModal show={this.state.editModalShow}
@@ -79,6 +81,7 @@ export class Users extends Component {
                                         pv={pv}
                                         vt={vt}
                                         rl={rl}
+                                        pr={pr}
 
                                     />
                                         

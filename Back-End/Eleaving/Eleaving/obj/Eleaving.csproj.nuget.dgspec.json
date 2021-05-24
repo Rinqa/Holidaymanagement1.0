@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rinor\\Desktop\\Eleaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {}
+    "C:\\Users\\Rinor\\Desktop\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rinor\\Desktop\\Eleaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {
+    "C:\\Users\\Rinor\\Desktop\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rinor\\Desktop\\Eleaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+        "projectUniqueName": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
         "projectName": "Eleaving",
-        "projectPath": "C:\\Users\\Rinor\\Desktop\\Eleaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+        "projectPath": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
         "packagesPath": "C:\\Users\\Rinor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rinor\\Desktop\\Eleaving\\Back-End\\Eleaving\\Eleaving\\obj\\",
+        "outputPath": "C:\\Users\\Rinor\\Desktop\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
