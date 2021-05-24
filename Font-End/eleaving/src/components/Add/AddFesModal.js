@@ -56,13 +56,7 @@ export class AddFesModal extends Component {
                         <Row>
                             <Col sm={6}>
                                 <Form onSubmit={this.handleSubmit}>
-                                    <Form.Group controlId="Id">
-                                        <Form.Label>FestaiId</Form.Label>
-                                        <Form.Control type="text" name="Id" required
-                                            disabled
-                                            defaultValue={this.props.id}
-                                            placeholder="FestaZyrtare" />
-                                    </Form.Group>
+                                   
 
                                     <Form.Group controlId="Festa">
                                         <Form.Label>Festa</Form.Label>

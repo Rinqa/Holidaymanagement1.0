@@ -27,7 +27,7 @@ export class Users extends Component {
     }
 
     render() {
-        const { user } = this.state;
+        const { user, id,em,mb,gj,np,tl,eml,ps,st,pz,dp,pv,vt,rl,pr } = this.state;
         console.log(user);
         let addModalClose = () => this.setState({ addModalShow: false });
         let editModalClose = () => this.setState({ editModalShow: false });
@@ -44,15 +44,45 @@ export class Users extends Component {
                                     <Card.Title>{us.Emri} {us.Mbiemri}</Card.Title>
                                     <Card.Text><i className="fa fa-mail-forward"></i>{us.Email}  </Card.Text>
                                     <Card.Text>Departamenti: {us.Departamenti}</Card.Text>
+                                    <Card.Text>Satusi: {us.Statusi}</Card.Text>
                                     <Card.Text><i className="fa fa-phone"></i> {us.Tel}</Card.Text>
                                     <Card.Footer><Button className="btn btn-block" onClick={() => this.setState({
                                         editModalShow: true,
-                                        idep: us.Id, depsn: us.Departamenti
+                                        id:us.Id,
+                                        em:us.Emri,
+                                        mb:us.Mbiemri,
+                                        gj:us.Gjinia,
+                                        np:us.NrPersonal,
+                                        tl:us.Tel,
+                                        eml:us.Email,
+                                        ps:us.Passwordi,
+                                        st:us.Statusi,
+                                        pz:us.Pozita,
+                                        dp:us.Departamenti,
+                                        pv:us.PushumVjetor,
+                                        vt:us.Viti,
+                                        rl:us.Roli,
+                                        pr:us.profili
                                     })}>Edit/Show</Button>
                                     
                                     <EditUserModal show={this.state.editModalShow}
                                         onHide={editModalClose}
-                                    
+                                        id={id}
+                                        em={em}
+                                        mb={mb}
+                                        gj={gj}
+                                        np={np}
+                                        tl={tl}
+                                        eml={eml}
+                                        ps={ps}
+                                        st={st}
+                                        pz={pz}
+                                        dp={dp}
+                                        pv={pv}
+                                        vt={vt}
+                                        rl={rl}
+                                        pr={pr}
+
                                     />
                                         
                                     
