@@ -24,7 +24,6 @@ export class AddRoliModal extends Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              
                 Roli: event.target.Roli.value
             })
         })

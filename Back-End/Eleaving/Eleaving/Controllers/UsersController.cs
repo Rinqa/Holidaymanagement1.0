@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Eleaving.Models;
 using Microsoft.Extensions.Configuration;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Eleaving.Controllers
 {
@@ -16,9 +18,11 @@ namespace Eleaving.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public UsersController(IConfiguration configuration)
+        private readonly IWebHostEnvironment _env;
+        public UsersController(IConfiguration configuration, IWebHostEnvironment env)
         {
             _configuration = configuration;
+            _env = env;
         }
         [HttpGet]
         public JsonResult Get()
@@ -138,6 +142,31 @@ namespace Eleaving.Controllers
             }
 
             return new JsonResult("Deleted Successfully");
+        }
+
+        [Route("SaveFile")]
+        [HttpPost]
+
+        public JsonResult SaveFile() 
+        {
+            try
+            {
+                var HttpRequest = Request.Form;
+                var postedFile = HttpRequest.Files[0];
+                string filename = postedFile.FileName;
+                var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
+
+                using(var stream = new FileStream(physicalPath, FileMode.Create)) 
+                {
+                    postedFile.CopyTo(stream);
+                }
+
+                return new JsonResult(filename);
+            }
+            catch (Exception)
+            {
+                return new JsonResult("anonymous.png");
+            }
         }
     }
 }
