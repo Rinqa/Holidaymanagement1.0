@@ -777,23 +777,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iFix\\.nuget\\packages\\": {},
+    "C:\\Users\\Plus Computers\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iFix\\Documents\\GitHub\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+      "projectUniqueName": "C:\\Users\\Plus Computers\\OneDrive\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
       "projectName": "Eleaving",
-      "projectPath": "C:\\Users\\iFix\\Documents\\GitHub\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
-      "packagesPath": "C:\\Users\\iFix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iFix\\Documents\\GitHub\\Back-End\\Eleaving\\Eleaving\\obj\\",
+      "projectPath": "C:\\Users\\Plus Computers\\OneDrive\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+      "packagesPath": "C:\\Users\\Plus Computers\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Plus Computers\\OneDrive\\Documents\\GitHub\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\iFix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Plus Computers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -851,7 +854,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   },
