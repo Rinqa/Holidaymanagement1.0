@@ -1,10 +1,9 @@
-import { CardHeader, Container } from '@material-ui/core';
+
 import React from 'react'
 
 
 import { Component } from 'react'
-import { Table, Card, Col, Row } from 'react-bootstrap';
-import { Button, ButtonToolbar } from 'react-bootstrap';
+import { Table} from 'react-bootstrap';
 
 
 export class Kompania extends Component {

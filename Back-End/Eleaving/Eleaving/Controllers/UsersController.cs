@@ -99,7 +99,7 @@ namespace Eleaving.Controllers
                     PushimVjetor = '" + u.PushimiVjetor+ @"',
                     Viti = '" + u.Viti+ @"',
                     Roli = '" + u.Roli+ @"',
-                    Profili= '"+u.Profili+@"',
+                    Profili= '"+u.Profili+@"'
                     where Id  = " + u.Id + @" 
                     ";
             DataTable table = new DataTable();

@@ -5,8 +5,11 @@ export class EditUserModal extends Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFileSelected=this.handleFileSelected.bind(this);
         this.state = { stat: [], poz: [], dep: [], rroli: [] };
     }
+    photofilename = "anonymous.png";
+    imagesrc = process.env.REACT_APP_PHOTOPATH+this.photofilename;
     componentDidMount() {
         fetch(process.env.REACT_APP_API + "StatusiPuntorit")
             .then(response => response.json())
@@ -33,10 +36,10 @@ export class EditUserModal extends Component {
     handleSubmit(event) {
         event.preventDefault();
         fetch(process.env.REACT_APP_API + 'Users', {
-            method: 'PUT',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
+            method:'PUT',
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json'
             },
             body: JSON.stringify({
                 Id: event.target.Id.value,
@@ -49,11 +52,11 @@ export class EditUserModal extends Component {
                 Passwordi: event.target.Passwordi.value,
                 Statusi: event.target.Statusi.value,
                 Pozita: event.target.Pozita.value,
-                Departamenti: event.target.Departamenti.value,
+                Depratamenti: event.target.Depratamenti.value,
                 PushimVjetor: event.target.PushimVjetor.value,
                 Viti: event.target.Viti.value,
                 Roli: event.target.Roli.value,
-                profili: event.target.profili.value
+                Profili:this.photofilename,
 
 
             })
@@ -65,6 +68,29 @@ export class EditUserModal extends Component {
                 (error) => {
                     alert('Failed');
                 })
+    }
+    handleFileSelected(event){
+        event.preventDefault();
+        this.photofilename=event.target.files[0].name;
+        const formData = new FormData();
+        formData.append(
+            "myFile",
+            event.target.files[0],
+            event.target.files[0].name
+        );
+
+        fetch(process.env.REACT_APP_API+'Users/SaveFile',{
+            method:'POST',
+            body:formData
+        })
+        .then(res=>res.json())
+        .then((result)=>{
+            this.imagesrc=process.env.REACT_APP_PHOTOPATH+result;
+        },
+        (error)=>{
+            alert('Failed');
+        })
+        
     }
     render() {
         return (
@@ -78,7 +104,7 @@ export class EditUserModal extends Component {
                 >
                     <Modal.Header clooseButton>
                         <Modal.Title id="contained-modal-title-vcenter">
-                            Edit Department
+                            Edit USers
         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -156,8 +182,8 @@ export class EditUserModal extends Component {
                                                         <option key={com.Id}>{com.Pozita}</option>)}
                                                 </Form.Control>
                                             </Form.Group>
-                                            <Form.Group controlId="Departamenti">
-                                                <Form.Label>Departamenti</Form.Label>
+                                            <Form.Group controlId="Depratamenti">
+                                                <Form.Label>Depratamenti</Form.Label>
                                                 <Form.Control as="select" defaultValue={this.props.poz} >
                                                     {this.state.dep.map(com =>
                                                         <option key={com.Id}>{com.Departamenti}</option>)}
@@ -180,7 +206,7 @@ export class EditUserModal extends Component {
                                                 />
 
                                             </Form.Group>
-                                            <Form.Group controlId="Departamenti">
+                                            <Form.Group controlId="Roli">
                                                 <Form.Label>Roli</Form.Label>
                                                 <Form.Control as="select" defaultValue={this.props.rl} >
                                                     {this.state.rroli.map(rol =>
@@ -188,19 +214,21 @@ export class EditUserModal extends Component {
                                                 </Form.Control>
                                             </Form.Group>
                                         </Col>
-                                        <Col sm={6}>
-                                            <Image width="200px" height="200px"
-                                                src="https://thispersondoesnotexist.com/image" />
-                                            <input onChange={this.handleFileSelected} type="File" />
-                                        </Col>
+                                        
                                     </Row>
                                     <Form.Group>
                                         <Button variant="primary" type="submit">
                                             Update Department
                         </Button>
                                     </Form.Group>
+                                    
                                 </Form>
                             </Col>
+                            <Col sm={6}>
+                                            <Image width="200px" height="200px"
+                                                src={process.env.REACT_APP_PHOTOPATH+this.props.pr} />
+                                            <input onChange={this.handleFileSelected} name="photofilename" type="File" />
+                                        </Col>
                         </Row>
                     </Modal.Body>
 
