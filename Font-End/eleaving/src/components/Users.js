@@ -27,7 +27,7 @@ export class Users extends Component {
     }
 
     render() {
-        const { user, id,em,mb,gj,np,tl,eml,ps,st,pz,dp,pv,vt,rl,pr } = this.state;
+        const { user, id,uz,em,mb,gj,np,tl,eml,ps,st,pz,dp,pv,vt,rl,pr } = this.state;
         console.log(user);
         let editModalClose = () => this.setState({ editModalShow: false });
         return (
@@ -38,7 +38,7 @@ export class Users extends Component {
                         {user.map(us =>
 
                             <Card key={us.Id} style={{ width: '18rem' }} className="us">
-                                <Card.Img variant="top" width="400px" height="400px" src={process.env.REACT_APP_PHOTOPATH+us.Profili} />
+                                <Card.Img variant="top" width="400px" height="400px" src={process.env.REACT_APP_PHOTOPATH+us.profili} />
                                 <Card.Body>
                                     <Card.Title>{us.Emri} {us.Mbiemri}</Card.Title>
                                     <Card.Text><i className="fa fa-mail-forward"></i>{us.Email}  </Card.Text>
@@ -48,6 +48,7 @@ export class Users extends Component {
                                     <Card.Footer><Button className="btn btn-block" onClick={() => this.setState({
                                         editModalShow: true,
                                         id:us.Id,
+                                        uz:us.username,
                                         em:us.Emri,
                                         mb:us.Mbiemri,
                                         gj:us.Gjinia,
@@ -67,6 +68,7 @@ export class Users extends Component {
                                     <EditUserModal show={this.state.editModalShow}
                                         onHide={editModalClose}
                                         id={id}
+                                        uz={uz}
                                         em={em}
                                         mb={mb}
                                         gj={gj}

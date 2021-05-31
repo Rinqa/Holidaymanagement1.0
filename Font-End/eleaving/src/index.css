@@ -17,3 +17,39 @@ code {
 .btn{
   margin:1%;  
 }
+.card{
+  margin: 1% !important;
+  width: auto;
+  margin: auto;
+  color:rgb(90, 89, 89);
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+}
+
+.row{
+  justify-content: center;
+}
+.homee{
+  margin: 15%;
+}
+.title{
+  margin: auto;
+  text-align: center;
+}
+#u{
+  text-decoration: none;
+}
+
+a {
+  color:rgb(90, 89, 89);
+  text-decoration: none;
+}
+a :hover{
+  text-decoration: none;
+  color: black;
+  
+}
+
+
+

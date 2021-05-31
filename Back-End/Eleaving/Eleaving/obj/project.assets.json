@@ -782,11 +782,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rinor\\Documents\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+      "projectUniqueName": "C:\\Users\\Rinor\\Documents\\GitHub\\ELeaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
       "projectName": "Eleaving",
-      "projectPath": "C:\\Users\\Rinor\\Documents\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+      "projectPath": "C:\\Users\\Rinor\\Documents\\GitHub\\ELeaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
       "packagesPath": "C:\\Users\\Rinor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rinor\\Documents\\Holidaymanagement1.0\\Back-End\\Eleaving\\Eleaving\\obj\\",
+      "outputPath": "C:\\Users\\Rinor\\Documents\\GitHub\\ELeaving\\Back-End\\Eleaving\\Eleaving\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -43,6 +43,7 @@ export class EditUserModal extends Component {
             },
             body: JSON.stringify({
                 Id: event.target.Id.value,
+                username:event.target.username.value,
                 Emri: event.target.Emri.value,
                 Mbiemri: event.target.Mbiemri.value,
                 Gjinia: event.target.Gjinia.value,
@@ -121,7 +122,12 @@ export class EditUserModal extends Component {
                                                     defaultValue={this.props.id}
                                                     placeholder="Id" />
                                             </Form.Group>
-
+                                            <Form.Group controlId="username">
+                                                <Form.Label>UserName</Form.Label>
+                                                <Form.Control type="text" name="username" required
+                                                    defaultValue={this.props.uz}
+                                                    placeholder="Emri" />
+                                            </Form.Group>
                                             <Form.Group controlId="Emri">
                                                 <Form.Label>Emri</Form.Label>
                                                 <Form.Control type="text" name="Emri" required
@@ -218,7 +224,7 @@ export class EditUserModal extends Component {
                                     </Row>
                                     <Form.Group>
                                         <Button variant="primary" type="submit">
-                                            Update Department
+                                            Update User
                         </Button>
                                     </Form.Group>
                                     

@@ -48,17 +48,18 @@ namespace Eleaving.Controllers
         [HttpPost]
         public JsonResult Post(Users u)
         {
-            string query = @"insert into Users (Emri,Mbiemri,Gjinia,NrPersonal,Tel,Email,Passwordi,Statusi,Pozita,Departamenti,PushimiVjetor,Viti,Roli,Profili)values (
+            string query = @"insert into Users (username,Emri,Mbiemri,Gjinia,NrPersonal,Tel,Email,password,Statusi,Pozita,Departamenti,PushimiVjetor,Viti,Roli,Profili)values (
+              '" + u.username + @"',
               '" + u.Emri + @"',
               '" + u.Mbiemri + @"',
               '" + u.Gjinia + @"',
               '" + u.NrPersonal + @"',
               '" + u.Tel + @"',
               '" + u.Email + @"',
-              '" + u.Passwordi + @"',
+              '" + u.password + @"',
               '" + u.Statusi + @"',
               '" + u.Pozita + @"',
-              '" + u.Depratamenti + @"',
+              '" + u.Departamenti + @"',
               '" + u.PushimiVjetor + @"',
               '" + u.Viti + @"',
               '" + u.Roli + @"',
@@ -86,16 +87,17 @@ namespace Eleaving.Controllers
         {
             string query = @"
                     update Users set 
+                    username = '"+u.username+@"',
                     Emri = '" + u.Emri + @"',
                     Mbiemri = '" + u.Mbiemri + @"',
                     Gjinia = '" + u.Gjinia + @"',
                     NrPersonal = '" + u.NrPersonal + @"',
                     Tel = '" + u.Tel + @"',
                     Email = '" + u.Email + @"',
-                    Passwordi = '" + u.Passwordi+ @"',
+                    password = '" + u.password+ @"',
                     Statusi = '" + u.Statusi + @"',
                     Pozita = '" + u.Pozita+ @"',
-                    Depratamenti = '" + u.Depratamenti + @"',
+                    Departamenti = '" + u.Departamenti + @"',
                     PushimVjetor = '" + u.PushimiVjetor+ @"',
                     Viti = '" + u.Viti+ @"',
                     Roli = '" + u.Roli+ @"',

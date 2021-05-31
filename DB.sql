@@ -39,13 +39,14 @@ create table PushimetMarrura(
 );
 create table Users(
 	Id int identity(1,1) primary key,
+	username varchar(50),
 	Emri varchar(255),
 	Mbiemri varchar(255),
 	Gjinia char(1),
 	NrPersonal int,
 	Tel varchar(30),
 	Email varchar(255),
-	Passwordi varchar(32),
+	Password varchar(32),
 	Statusi varchar(255),
 	Pozita varchar(255),
 	Departamenti varchar(255),
