@@ -38,7 +38,7 @@ export class Users extends Component {
                         {user.map(us =>
 
                             <Card key={us.Id} style={{ width: '18rem' }} className="us">
-                                <Card.Img variant="top" width="400px" height="400px" src={process.env.REACT_APP_PHOTOPATH+us.profili} />
+                                <Card.Img variant="top" width="400px" height="200px" src={process.env.REACT_APP_PHOTOPATH+us.profili} />
                                 <Card.Body>
                                     <Card.Title>{us.Emri} {us.Mbiemri}</Card.Title>
                                     <Card.Text><i className="fa fa-mail-forward"></i>{us.Email}  </Card.Text>
