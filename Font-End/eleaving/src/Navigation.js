@@ -6,8 +6,8 @@ export class Navigation extends Component{
 
     render(){
         return(
-            <Navbar bg="dark" expand="lg " className="justify-content-end">
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="justify-content-end text-white">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className="text-white"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
                 <NavLink className="d-inline p-2 bg-transparent text-white" to="/">
