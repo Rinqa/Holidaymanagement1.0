@@ -6,29 +6,29 @@ export class Navigation extends Component{
 
     render(){
         return(
-            <Navbar bg="white" expand="lg " className="justify-content-end">
+            <Navbar bg="dark" expand="lg " className="justify-content-end">
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
-                <NavLink className="d-inline p-2 bg-white text-dark" to="/">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/">
                     Home
                 </NavLink>
-                <NavLink className="d-inline p-2 bg-white text-dark" to="/department">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/department">
                     Apliko
                 </NavLink>
-                <NavLink className="d-inline p-2 bg-white text-dark" to="/employee">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/employee">
                     Profili
                 </NavLink>
-                <NavLink className="d-inline p-2 bg-white text-dark" to="/employee">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/employee">
                     Pushimet
                 </NavLink>
-                <NavLink className="d-inline p-2 bg-white text-dark" to="/calendar">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/calendar">
                     Festat Zyrtare
                 </NavLink>
-                <NavLink className="d-inline p-2 bg-white text-dark" to="/employee">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/employee">
                     Admin
                 </NavLink>
-                <NavLink className="d-inline p-2 bg-white text-dark" to="/employee">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/employee">
                     Login
                 </NavLink>
 

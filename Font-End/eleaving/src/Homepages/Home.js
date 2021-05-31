@@ -1,11 +1,13 @@
 import React from 'react';
 import { Component } from 'react';
 import { Row, Col, Card } from 'react-bootstrap'
-
+import {Navigation} from '../Navigation'
 export class Home extends Component {
 
     render() {
         return (
+            <div className="">
+                  <Navigation/>
             <div className="homee">
 
                 <Col>
@@ -57,6 +59,7 @@ export class Home extends Component {
 
                     </Row>
                 </Col>
+                </div>
             </div>
         )
     }
