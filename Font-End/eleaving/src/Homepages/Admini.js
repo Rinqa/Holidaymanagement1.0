@@ -18,7 +18,7 @@ export class Admini extends Component {
     render() {
         return (
             <Admin dataProvider={restProvider('http://localhost:3000/admin')}>
-            <Resource name="users" list={Users}></Resource>
+            <Resource name="Users" list={Users}></Resource>
             <Resource name="Pushimet" list={Pushimet}></Resource>
             <Resource name="Departamentet" list={Departamenti}></Resource>
             <Resource name="Aplikimet" list={Aplikimet}></Resource>

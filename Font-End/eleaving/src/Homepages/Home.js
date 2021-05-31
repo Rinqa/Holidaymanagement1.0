@@ -50,7 +50,7 @@ export class Home extends Component {
                                 <h1><i className="fa fa-user"></i></h1>
                             </Card.Title>
                             <Card.Footer>
-                                <a href="/admin" id="u"><h3>admin</h3></a>
+                                <a href="/admin" id="u"><h3>Admin</h3></a>
                             </Card.Footer>
                             
                         </Card>

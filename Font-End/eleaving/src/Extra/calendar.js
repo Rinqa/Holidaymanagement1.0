@@ -49,11 +49,7 @@ export class calendar extends Component {
                     </Col>
                     <Col sm={6}>
                         <Row>
-                            <p>asdasdasd
-                                asdasd
-                                asdasdasd
-                                asd
-                                asd
+                            <p>Kalendari
                             </p>
                         </Row>
                         <Row><Calendar /></Row>
