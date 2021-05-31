@@ -9,7 +9,7 @@ export class calendar extends Component {
         this.state = { dep: [] }
     }
     refreshList() {
-        fetch(process.env.REACT_APP_API + 'FestaZyrtare')
+        fetch(process.env.REACT_APP_API + 'FZyrtare')
             .then(response => response.json())
             .then(data => {
                 this.setState({ dep: data });
