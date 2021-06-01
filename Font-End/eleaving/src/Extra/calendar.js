@@ -2,18 +2,23 @@
 import Calendar from 'react-calendar';
 import { Component } from 'react';
 import 'react-calendar/dist/Calendar.css';
-import { Col,Row, Table } from 'react-bootstrap'
+import { Col, Row, Table } from 'react-bootstrap'
 export class calendar extends Component {
     constructor(props) {
         super(props)
-        this.state = { dep: [] }
+        this.state = { dep: [], fz: [] }
     }
     refreshList() {
         fetch(process.env.REACT_APP_API + 'FZyrtare')
             .then(response => response.json())
             .then(data => {
                 this.setState({ dep: data });
-            })
+            });
+        fetch(process.env.REACT_APP_API + 'FestaZyrtare')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ fz: data })
+            });
     }
     componentDidMount() {
         this.refreshList();
@@ -22,18 +27,22 @@ export class calendar extends Component {
         this.refreshList();
     }
     render() {
-        const { dep } = this.state;
+        const { dep, fz } = this.state;
         return (
             <div>
                 <Row>
                     <Col sm={6}>
                         <Table className="mt-4" striped bordered hover size="sm">
                             <thead>
+
+                                <tr>
+                                    <th colSpan="3">Upcomming</th>
+                                </tr>
                                 <tr>
                                     <th>ID</th>
                                     <th>Festa</th>
                                     <th>Dita</th>
-                                    
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -48,12 +57,32 @@ export class calendar extends Component {
                         </Table>
                     </Col>
                     <Col sm={6}>
+                        
                         <Row>
+                            <Table className="mt-4" striped bordered hover size="sm">
+                                <thead>
+                                    <tr>
+                                        <th>Festa</th>
+                                        <th>Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {fz.map(f =>
+                                        <tr>
+                                            <td>{f.Festa}</td>
+                                            <td>{f.Dita}</td>
+                                        </tr>)}
+                                </tbody>
+                            </Table>
+                        </Row>
+                        
+                        
+                    
+                    <Row>
                             <p>Kalendari
                             </p>
                         </Row>
                         <Row><Calendar /></Row>
-                        
                     </Col>
                 </Row>
             </div>
