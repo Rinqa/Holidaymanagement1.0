@@ -13,7 +13,7 @@ import Roli from '../components/Roli'
 import PushimetM from '../components/PushimeteMarrura'
 import StatPuntori from '../components/StatusiPuntorit'
 import KatPushimit from '../components/kategoriaPushimit'
-import google from '../googleApi'
+import Home from './Home'
 export class Admini extends Component {
     render() {
         return (
@@ -29,7 +29,8 @@ export class Admini extends Component {
             <Resource name="Pushimet e marrura" list={PushimetM}></Resource>
             <Resource name="Statusi Puntorit" list={StatPuntori}></Resource>
             <Resource name="Kategorit e Pushimeve" list={KatPushimit}></Resource>
-            <Resource name="Login with gooogle" list={google}></Resource>
+            
+            
         </Admin>
         )}
 }

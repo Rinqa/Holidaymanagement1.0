@@ -7,8 +7,8 @@ export class profili extends Component {
     render() {
         return (
             <Admin dataProvider={restProvider('http://localhost:3000/admin')}>
-            <Resource name="Profili" list={usersi} ></Resource>
-            <Resource name="Pushimet" ></Resource>
+            <Resource name='Profili' list={usersi} ></Resource>
+            <Resource name="Ndrro Fjalkalimin " list={usersi} ></Resource>
             <Resource name="Aplikimet" ></Resource>
         </Admin>
         )}

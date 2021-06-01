@@ -102,11 +102,7 @@ export class EditUserModal extends Component {
                     aria-labelledby="contained-modal-title-vcenter"
                     centered
                 >
-                    <Modal.Header clooseButton>
-                        <Modal.Title id="contained-modal-title-vcenter">
-                            Edit USers
-        </Modal.Title>
-                    </Modal.Header>
+                    
                     <Modal.Body>
 
                         <Row>
