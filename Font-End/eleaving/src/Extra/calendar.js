@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import { Component } from 'react';
 import 'react-calendar/dist/Calendar.css';
 import { Col, Row, Table } from 'react-bootstrap'
+import {Navigation} from '../Navigation'
 export class calendar extends Component {
     constructor(props) {
         super(props)
@@ -30,6 +31,7 @@ export class calendar extends Component {
         const { dep, fz } = this.state;
         return (
             <div>
+            <Navigation/>
                 <Row>
                     <Col sm={6}>
                         <Table className="mt-4" striped bordered hover size="sm">
