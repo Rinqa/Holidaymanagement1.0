@@ -25,7 +25,7 @@ namespace Eleaving.Controllers
         {
             string query = @"
                     select * from PushimetMarrura
-                    where Id = " + id + @" order by Viti 
+                    where Users = " + id + @" order by Viti 
                     ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
@@ -43,7 +43,7 @@ namespace Eleaving.Controllers
                 }
             }
 
-            return new JsonResult("Deleted Successfully");
+            return new JsonResult(table);
         }
     }
 }
