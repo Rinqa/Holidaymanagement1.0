@@ -24,7 +24,7 @@ namespace Eleaving.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-                    select * from PushimetMarrura
+                    select Users,Pushimi,Ditet, convert(varchar(10),Viti,120)as Viti from PushimetMarrura
                     where Users = " + id + @" order by Viti 
                     ";
             DataTable table = new DataTable();

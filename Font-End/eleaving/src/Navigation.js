@@ -19,13 +19,13 @@ export class Navigation extends Component{
                 <NavLink className="d-inline p-2 bg-transparent text-white" to="/employee">
                     Profili
                 </NavLink>
-                <NavLink className="d-inline p-2 bg-transparent text-white" to="/employee">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/pushimet">
                     Pushimet
                 </NavLink>
                 <NavLink className="d-inline p-2 bg-transparent text-white" to="/calendar">
                     Festat Zyrtare
                 </NavLink>
-                <NavLink className="d-inline p-2 bg-transparent text-white" to="/employee">
+                <NavLink className="d-inline p-2 bg-transparent text-white" to="/admin">
                     Admin
                 </NavLink>
                 <NavLink className="d-inline p-2 bg-transparent text-white" to="/employee">
