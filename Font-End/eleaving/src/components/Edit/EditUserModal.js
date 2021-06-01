@@ -5,11 +5,11 @@ export class EditUserModal extends Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleFileSelected=this.handleFileSelected.bind(this);
+        this.handleFileSelected = this.handleFileSelected.bind(this);
         this.state = { stat: [], poz: [], dep: [], rroli: [] };
     }
     photofilename = "anonymous.png";
-    imagesrc = process.env.REACT_APP_PHOTOPATH+this.photofilename;
+    imagesrc = process.env.REACT_APP_PHOTOPATH + this.photofilename;
     componentDidMount() {
         fetch(process.env.REACT_APP_API + "StatusiPuntorit")
             .then(response => response.json())
@@ -36,28 +36,27 @@ export class EditUserModal extends Component {
     handleSubmit(event) {
         event.preventDefault();
         fetch(process.env.REACT_APP_API + 'Users', {
-            method:'PUT',
-            headers:{
-                'Accept':'application/json',
-                'Content-Type':'application/json'
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 Id: event.target.Id.value,
-                username:event.target.username.value,
+                username: event.target.username.value,
                 Emri: event.target.Emri.value,
                 Mbiemri: event.target.Mbiemri.value,
                 Gjinia: event.target.Gjinia.value,
                 NrPersonal: event.target.NrPersonal.value,
                 Tel: event.target.Tel.value,
                 Email: event.target.Email.value,
-                Passwordi: event.target.Passwordi.value,
                 Statusi: event.target.Statusi.value,
                 Pozita: event.target.Pozita.value,
                 Depratamenti: event.target.Depratamenti.value,
                 PushimVjetor: event.target.PushimVjetor.value,
                 Viti: event.target.Viti.value,
                 Roli: event.target.Roli.value,
-                Profili:this.photofilename,
+                Profili: this.photofilename,
 
 
             })
@@ -70,9 +69,9 @@ export class EditUserModal extends Component {
                     alert('Failed');
                 })
     }
-    handleFileSelected(event){
+    handleFileSelected(event) {
         event.preventDefault();
-        this.photofilename=event.target.files[0].name;
+        this.photofilename = event.target.files[0].name;
         const formData = new FormData();
         formData.append(
             "myFile",
@@ -80,18 +79,18 @@ export class EditUserModal extends Component {
             event.target.files[0].name
         );
 
-        fetch(process.env.REACT_APP_API+'Users/SaveFile',{
-            method:'POST',
-            body:formData
+        fetch(process.env.REACT_APP_API + 'Users/SaveFile', {
+            method: 'POST',
+            body: formData
         })
-        .then(res=>res.json())
-        .then((result)=>{
-            this.imagesrc=process.env.REACT_APP_PHOTOPATH+result;
-        },
-        (error)=>{
-            alert('Failed');
-        })
-        
+            .then(res => res.json())
+            .then((result) => {
+                this.imagesrc = process.env.REACT_APP_PHOTOPATH + result;
+            },
+                (error) => {
+                    alert('Failed');
+                })
+
     }
     render() {
         return (
@@ -115,18 +114,12 @@ export class EditUserModal extends Component {
                                 <Form onSubmit={this.handleSubmit}>
                                     <Row>
                                         <Col sm={6}>
-                                            <Form.Group controlId="Id">
-                                                <Form.Label>Id</Form.Label>
-                                                <Form.Control type="text" name="Id" required
-                                                    disabled
-                                                    defaultValue={this.props.id}
-                                                    placeholder="Id" />
-                                            </Form.Group>
+
                                             <Form.Group controlId="username">
                                                 <Form.Label>UserName</Form.Label>
                                                 <Form.Control type="text" name="username" required
                                                     defaultValue={this.props.uz}
-                                                    placeholder="Emri" />
+                                                    placeholder="Username" />
                                             </Form.Group>
                                             <Form.Group controlId="Emri">
                                                 <Form.Label>Emri</Form.Label>
@@ -168,12 +161,7 @@ export class EditUserModal extends Component {
                                             </Form.Group>
                                         </Col>
                                         <Col sm={6}>
-                                            <Form.Group controlId="Passwordi">
-                                                <Form.Label>Passwordi</Form.Label>
-                                                <Form.Control type="password" name="Passwordi" required
-                                                    defaultValue={this.props.pw}
-                                                    placeholder="Passwordi" />
-                                            </Form.Group>
+
                                             <Form.Group controlId="Statusi">
                                                 <Form.Label>Statusi</Form.Label>
                                                 <Form.Control as="select" defaultValue={this.props.st} >
@@ -220,21 +208,25 @@ export class EditUserModal extends Component {
                                                 </Form.Control>
                                             </Form.Group>
                                         </Col>
-                                        
+
                                     </Row>
                                     <Form.Group>
-                                        <Button variant="primary" type="submit">
-                                            Update User
-                        </Button>
+
                                     </Form.Group>
-                                    
+
                                 </Form>
                             </Col>
                             <Col sm={6}>
-                                            <Image width="200px" height="200px"
-                                                src={process.env.REACT_APP_PHOTOPATH+this.props.pr} />
-                                            <input onChange={this.handleFileSelected} name="photofilename" type="File" />
-                                        </Col>
+                                <Image width="200px" height="200px"
+                                    src={process.env.REACT_APP_PHOTOPATH + this.props.pr} />
+                                <input onChange={this.handleFileSelected} name="photofilename" type="File" />
+                                <br/>
+                                <br/>
+                                <br/>
+                                <Button variant="primary" type="submit">
+                                    Update User
+                        </Button>
+                            </Col>
                         </Row>
                     </Modal.Body>
 

@@ -94,7 +94,6 @@ namespace Eleaving.Controllers
                     NrPersonal = '" + u.NrPersonal + @"',
                     Tel = '" + u.Tel + @"',
                     Email = '" + u.Email + @"',
-                    password = '" + u.password+ @"',
                     Statusi = '" + u.Statusi + @"',
                     Pozita = '" + u.Pozita+ @"',
                     Departamenti = '" + u.Departamenti + @"',
