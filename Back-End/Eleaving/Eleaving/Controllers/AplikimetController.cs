@@ -26,7 +26,7 @@ namespace Eleaving.Controllers
         public JsonResult Get()
         {
             string query = @"
-                    select Id, IdUser, Pushimi,convert(varchar(10),DataFillimit,120) as DataFillimit, convert(varchar(10),DataMbarimit,120) as DataMbarimit, Pershkrimi from Aplikimet";
+                    select Id, IdUser, Pushimi,convert(varchar(10),DataFillimit,120) as DataFillimit, convert(varchar(10),DataMbarimit,120) as DataMbarimit, Pershkrimi,Aprovimi from Aplikimet";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
             SqlDataReader myReader;
@@ -56,7 +56,8 @@ namespace Eleaving.Controllers
                      '" + apliko.Pushimi + @"',
                      '" + apliko.DataFillimit + @"',
                      '" + apliko.DataMbarimit + @"',
-                     '" + apliko.Pershkrimi + @"')
+                     '" + apliko.Pershkrimi + @"',
+                     '" + apliko.Aprovimi + @"')
                     ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
@@ -85,7 +86,8 @@ namespace Eleaving.Controllers
                     Pushimi = '" + apliko.Pushimi+ @"',
                     DataFillimit = '" + apliko.DataFillimit + @"',
                     DataMbarimit = '" + apliko.DataMbarimit+ @"',
-                    Pershkrimi = '" + apliko.Pershkrimi+ @"'
+                    Pershkrimi = '" + apliko.Pershkrimi+ @"',
+                    Aprovimi = '" + apliko.Aprovimi+ @"'
                     where Id  = " + apliko.Id + @" 
                                         
                     ";

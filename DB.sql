@@ -74,3 +74,5 @@ create table Aplikimet(
 	DataMbarimit date,
 	Pershkrimi varchar(500),
 );
+
+select * from Aplikimet where Aprovimi = 0 and DataFillimit > GETDATE()

@@ -29,6 +29,7 @@ export class EditAplModal extends Component {
                 DataFillimit: event.target.DataFillimit.value,
                 DataMbarimit: event.target.DataMbarimit.value,
                 Pershkrimi: event.target.Pershkrimi.value,
+                Aprovimi : event.target.Aprovimi.value,
             })
         })
             .then(res => res.json())
@@ -111,7 +112,13 @@ export class EditAplModal extends Component {
                                             defaultValue={this.props.pr}
                                             placeholder="Useri" />
                                     </Form.Group>
-
+                                    <Form.Group controlId="Aprovimi">
+                                                <Form.Label>Aprovimi: </Form.Label>
+                                                <Form.Control as="select" defaultValue={this.props.apro}>
+                                                    <option>True</option>
+                                                    <option>False</option>
+                                                </Form.Control>
+                                            </Form.Group>
                                     <Form.Group>
                                         <Button variant="primary" type="submit">
                                             Update Application

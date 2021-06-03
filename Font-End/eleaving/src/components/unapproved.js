@@ -2,18 +2,18 @@
 import React from 'react'
 
 import { Component } from 'react'
-import { Table } from 'react-bootstrap';
+import { Table} from 'react-bootstrap';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import { AddAplModal } from './Add/AddAplModal';
 import { EditAplModal } from './Edit/EditAplModal';
 
-export class Aplikimet extends Component {
+export class unapproved extends Component {
     constructor(props) {
         super(props)
         this.state = { dep: [] }
     }
     refreshList() {
-        fetch(process.env.REACT_APP_API + 'Aplikimet')
+        fetch(process.env.REACT_APP_API + 'unapprovedApli')
             .then(response => response.json())
             .then(data => {
                 this.setState({ dep: data });
@@ -25,19 +25,9 @@ export class Aplikimet extends Component {
     componentDidUpdate() {
         this.refreshList();
     }
-    deleteDep(depid) {
-        if (window.confirm('Are you sure?')) {
-            fetch(process.env.REACT_APP_API + 'Aplikimet/' + depid, {
-                method: 'DELETE',
-                header: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            })
-        }
-    }
+    
     render() {
-        const { dep, id, idU, pu, df, dm, pr, apro } = this.state;
+        const { dep,id, idU, pu,df,dm,pr,apro} = this.state;
         let addModalClose = () => this.setState({ addModalShow: false });
         let editModalClose = () => this.setState({ editModalShow: false });
         return (
@@ -48,8 +38,8 @@ export class Aplikimet extends Component {
                             onClick={() => this.setState({ addModalShow: true })}>
                             Add Application</Button>
 
-                        <AddAplModal show={this.state.addModalShow}
-                            onHide={addModalClose} />
+                         <AddAplModal show={this.state.addModalShow}
+                             onHide={addModalClose}/> 
                     </ButtonToolbar>
                 </div>
                 <Table className="mt-4" striped bordered hover size="sm">
@@ -73,20 +63,16 @@ export class Aplikimet extends Component {
                                 <td>{us.DataFillimit}</td>
                                 <td>{us.DataMbarimit}</td>
                                 <td>{us.Pershkrimi}</td>
-                                
-                                
+
                                 <td>
                                     <Button className="mr-2" variant="primary"
                                         onClick={() => this.setState({
                                             editModalShow: true,
-                                            id: us.Id, idU: us.IdUser, pu: us.Pushimi, df: us.DataFillimit, dm: us.DataMbarimit, pr: us.Pershkrimi, apro: us.Aprovimi
+                                            id:us.Id,idU: us.IdUser, pu: us.Pushimi,df:us.DataFillimit,dm:us.DataMbarimit,pr:us.Pershkrimi,apro:us.Aprovimi
                                         })}>
                                         <i className="fa fa-pencil"></i>
                                     </Button>
-                                    <Button className="mr-2" variant="danger"
-                                        onClick={() => this.deleteDep(us.Id)}>
-                                        <i className="fa fa-trash"></i>
-                                    </Button>
+                                    
                                     <EditAplModal show={this.state.editModalShow}
                                         onHide={editModalClose}
                                         id={id}
@@ -95,14 +81,14 @@ export class Aplikimet extends Component {
                                         df={df}
                                         dm={dm}
                                         pr={pr}
-                                        apro={apro}
-                                    />
+                                        apro={apro }
+                                       />
                                 </td>
                             </tr>
                         )}
                     </tbody>
                 </Table>
-
+                
 
             </div>
 
@@ -110,4 +96,4 @@ export class Aplikimet extends Component {
         )
     }
 }
-export default Aplikimet
+export default unapproved
