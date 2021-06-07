@@ -18,6 +18,6 @@ namespace Eleaving.Models
         public string DataMbarimit { get; set; }
 
         public string Pershkrimi { get; set; }
-        public bool Aprovimi { get; set; }
+        public string Aprovimi { get; set; }
     }
 }

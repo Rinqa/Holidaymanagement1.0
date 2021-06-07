@@ -12,6 +12,7 @@ export class EditPass extends Component {
     }
 
     handleSubmit(event) {
+        if (window.confirm('Are you sure?')) {
         event.preventDefault();
         fetch(process.env.REACT_APP_API + 'changePassword/1', {
             method: 'PUT',
@@ -30,7 +31,7 @@ export class EditPass extends Component {
             },
                 (error) => {
                     alert('Failed');
-                })
+                })}
     }
     render() {
         return (

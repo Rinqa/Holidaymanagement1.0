@@ -29,7 +29,7 @@ export class AddAplModal extends Component {
                 DataFillimit: event.target.DataFillimit.value,
                 DataMbarimit: event.target.DataMbarimit.value,
                 Pershkrimi: event.target.Pershkrimi.value,
-                Aprovimi:"False",
+                Aprovimi:"Pending",
             })
         })
             .then(res => res.json())

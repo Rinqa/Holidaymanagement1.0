@@ -73,7 +73,7 @@ create table Aplikimet(
 	DataFillimit date,
 	DataMbarimit date,
 	Pershkrimi varchar(500),
-	Aprovimi bit,
+	Aprovimi varchar(50),
 );
 
 select * from Aplikimet where Aprovimi = 0 and DataFillimit > GETDATE()

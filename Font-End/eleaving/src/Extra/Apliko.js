@@ -32,7 +32,7 @@ export class Apliko extends Component {
                 DataFillimit: event.target.DataFillimit.value,
                 DataMbarimit: event.target.DataMbarimit.value,
                 Pershkrimi: event.target.Pershkrimi.value,
-                Aprovimi : "False",
+                Aprovimi : "Pending",
             })
         })
             .then(res => res.json())
@@ -89,8 +89,7 @@ export class Apliko extends Component {
                                 </Form.Group>
                                 <Form.Group controlId="Pershkrimi">
                                     <Form.Label>Pershkrimi</Form.Label>
-                                    <Form.Control type="text" name="Perskrimi" required
-                                        defaultValue={this.props.pr}
+                                    <Form.Control type="text" name="Pershkrimi" 
                                         placeholder="Arsyja" />
                                 </Form.Group>
                             </Col></Row>

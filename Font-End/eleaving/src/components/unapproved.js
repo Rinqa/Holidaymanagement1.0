@@ -11,6 +11,7 @@ export class unapproved extends Component {
     constructor(props) {
         super(props)
         this.state = { dep: [] }
+        
     }
     refreshList() {
         fetch(process.env.REACT_APP_API + 'unapprovedApli')
@@ -25,7 +26,62 @@ export class unapproved extends Component {
     componentDidUpdate() {
         this.refreshList();
     }
-    
+    approvo(id,idU,pu,df,dm,pr) {
+        if (window.confirm('Are you sure?')) {
+            
+        fetch(process.env.REACT_APP_API + 'Aplikimet', {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                Id: id,
+                IdUser: idU,
+                Pushimi:pu,
+                DataFillimit:df,
+                DataMbarimit:dm,
+                Pershkrimi:pr,
+                Aprovimi : "Approved",
+            })
+        })
+            .then(res => res.json())
+            .then((result) => {
+                alert(result);
+            },
+                (error) => {
+                    alert('Failed');
+                })
+        }
+    }
+    decline(id,idU,pu,df,dm,pr) {
+        if (window.confirm('Are you sure?')) {
+            
+        fetch(process.env.REACT_APP_API + 'Aplikimet', {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                Id: id,
+                IdUser: idU,
+                Pushimi:pu,
+                DataFillimit:df,
+                DataMbarimit:dm,
+                Pershkrimi:pr,
+                Aprovimi : "Declined",
+            })
+        })
+            .then(res => res.json())
+            .then((result) => {
+                alert(result);
+            },
+                (error) => {
+                    alert('Failed');
+                })
+        }
+    }
     render() {
         const { dep,id, idU, pu,df,dm,pr,apro} = this.state;
         let addModalClose = () => this.setState({ addModalShow: false });
@@ -66,23 +122,13 @@ export class unapproved extends Component {
 
                                 <td>
                                     <Button className="mr-2" variant="primary"
-                                        onClick={() => this.setState({
-                                            editModalShow: true,
-                                            id:us.Id,idU: us.IdUser, pu: us.Pushimi,df:us.DataFillimit,dm:us.DataMbarimit,pr:us.Pershkrimi,apro:us.Aprovimi
-                                        })}>
-                                        <i className="fa fa-pencil"></i>
+                                        onClick={() => this.approvo(us.Id,us.IdUser, us.Pushimi,us.DataFillimit,us.DataMbarimit,us.Pershkrimi)}>
+                                        Approvo
                                     </Button>
-                                    
-                                    <EditAplModal show={this.state.editModalShow}
-                                        onHide={editModalClose}
-                                        id={id}
-                                        idU={idU}
-                                        pu={pu}
-                                        df={df}
-                                        dm={dm}
-                                        pr={pr}
-                                        apro={apro }
-                                       />
+                                    <Button className="mr-2" variant="danger"
+                                        onClick={() => this.decline(us.Id,us.IdUser, us.Pushimi,us.DataFillimit,us.DataMbarimit,us.Pershkrimi)}>
+                                        Decline
+                                    </Button>
                                 </td>
                             </tr>
                         )}

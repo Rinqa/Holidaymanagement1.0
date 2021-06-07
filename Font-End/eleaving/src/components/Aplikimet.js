@@ -61,6 +61,7 @@ export class Aplikimet extends Component {
                             <th>DataFillimit</th>
                             <th>DataMbarimit</th>
                             <th>Pershkrimi</th>
+                            <th>Vendimi</th>
                             <th>Options</th>
                         </tr>
                     </thead>
@@ -73,6 +74,7 @@ export class Aplikimet extends Component {
                                 <td>{us.DataFillimit}</td>
                                 <td>{us.DataMbarimit}</td>
                                 <td>{us.Pershkrimi}</td>
+                                <td>{us.Aprovimi}</td>
                                 
                                 
                                 <td>

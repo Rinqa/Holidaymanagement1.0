@@ -62,7 +62,7 @@ export class EditAplModal extends Component {
                                 <Form onSubmit={this.handleSubmit}>
                                     <Form.Group controlId="Id">
                                         <Form.Label>AplikimiId</Form.Label>
-                                        <Form.Control type="text" name="AplikimiId" required
+                                        <Form.Control type="text" name="Id" required
                                             disabled
                                             defaultValue={this.props.id}
                                             placeholder="Aplikimet" />
@@ -98,9 +98,9 @@ export class EditAplModal extends Component {
                                         <Form.Label>dataMarimit</Form.Label>
                                         <Form.Control
                                             type="date"
-                                            name="DataFillimit"
+                                            name="DataMbarimit"
                                             required
-                                            placeholder="Datafillimit"
+                                            placeholder="DataMbarimit"
                                             defaultValue={this.props.dm}
                                         />
 
@@ -115,8 +115,9 @@ export class EditAplModal extends Component {
                                     <Form.Group controlId="Aprovimi">
                                                 <Form.Label>Aprovimi: </Form.Label>
                                                 <Form.Control as="select" defaultValue={this.props.apro}>
-                                                    <option>True</option>
-                                                    <option>False</option>
+                                                    <option>  </option>
+                                                    <option>Approved</option>
+                                                    <option>Declined</option>
                                                 </Form.Control>
                                             </Form.Group>
                                     <Form.Group>
