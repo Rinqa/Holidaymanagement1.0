@@ -76,4 +76,5 @@ create table Aplikimet(
 	Aprovimi varchar(50),
 );
 
-select * from Aplikimet where Aprovimi = 0 and DataFillimit > GETDATE()
+select DataFillimit,DataMbarimit from Aplikimet
+SELECT DATEDIFF(day, DataFillimit, DataMbarimit)+1 AS Ditet from Aplikimet Where Id=1;
