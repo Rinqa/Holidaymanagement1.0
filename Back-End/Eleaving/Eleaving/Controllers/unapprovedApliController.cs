@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Eleaving.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -43,6 +44,31 @@ namespace Eleaving.Controllers
             }
 
             return new JsonResult(table);
+        }
+        [HttpPost]
+        public JsonResult Post(PushimetMarrura pm)
+        {
+            string query = @"insert into PushimetMarrura (Users,Pushimi,Ditet,Viti) values (
+              '" + pm.Users + @"',
+              '" + pm.Pushimi + @"',
+              '" + pm.Ditet + @"', 
+              '" + pm.Viti + @"'
+            )";
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+            return new JsonResult("Added successfully");
         }
     }
 }
