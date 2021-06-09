@@ -61,6 +61,14 @@ export class Apliko extends Component {
 
                                 </Form.Control>
                             </Form.Group>
+                            <Form.Group controlId="Pershkrimi">
+                                    <Form.Label>Pershkrimi</Form.Label>
+                                    <Form.Control type="text" name="Pershkrimi" 
+                                        placeholder="Arsyja" />
+                                </Form.Group>
+                            
+                        </Col>
+                            <Col sm={6}>
                             <Form.Group controlId="DataFillimit">
                                 <Form.Label>DataFillimit</Form.Label>
                                 <Form.Control
@@ -73,8 +81,6 @@ export class Apliko extends Component {
 
 
                             </Form.Group>
-                        </Col>
-                            <Col sm={6}>
                                 <Form.Group controlId="DataMbarimit">
                                     <Form.Label>DataMbarimit</Form.Label>
                                     <Form.Control
@@ -87,11 +93,7 @@ export class Apliko extends Component {
 
 
                                 </Form.Group>
-                                <Form.Group controlId="Pershkrimi">
-                                    <Form.Label>Pershkrimi</Form.Label>
-                                    <Form.Control type="text" name="Pershkrimi" 
-                                        placeholder="Arsyja" />
-                                </Form.Group>
+                                
                             </Col></Row>
                         <Form.Group>
                             <Button variant="primary" type="submit">
