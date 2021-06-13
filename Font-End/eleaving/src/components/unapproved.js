@@ -5,7 +5,6 @@ import { Component } from 'react'
 import { Table} from 'react-bootstrap';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import { AddAplModal } from './Add/AddAplModal';
-import { EditAplModal } from './Edit/EditAplModal';
 
 export class unapproved extends Component {
     constructor(props) {
@@ -83,9 +82,8 @@ export class unapproved extends Component {
         }
     }
     render() {
-        const { dep,id, idU, pu,df,dm,pr,apro} = this.state;
+        const { dep} = this.state;
         let addModalClose = () => this.setState({ addModalShow: false });
-        let editModalClose = () => this.setState({ editModalShow: false });
         return (
             <div >
                 <div className="right">

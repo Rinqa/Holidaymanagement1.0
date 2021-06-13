@@ -13,7 +13,6 @@ import Roli from '../components/Roli'
 import PushimetM from '../components/PushimeteMarrura'
 import StatPuntori from '../components/StatusiPuntorit'
 import KatPushimit from '../components/kategoriaPushimit'
-import Home from './Home'
 import adminHome from './adminHome'
 export class Admini extends Component {
     render() {

@@ -777,25 +777,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rinnnqax\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Rinor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rinnnqax\\Desktop\\ELeaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+      "projectUniqueName": "C:\\Users\\Rinor\\Documents\\GitHub\\ELeaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
       "projectName": "Eleaving",
-      "projectPath": "C:\\Users\\Rinnnqax\\Desktop\\ELeaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
-      "packagesPath": "C:\\Users\\Rinnnqax\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rinnnqax\\Desktop\\ELeaving\\Back-End\\Eleaving\\Eleaving\\obj\\",
+      "projectPath": "C:\\Users\\Rinor\\Documents\\GitHub\\ELeaving\\Back-End\\Eleaving\\Eleaving\\Eleaving.csproj",
+      "packagesPath": "C:\\Users\\Rinor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rinor\\Documents\\GitHub\\ELeaving\\Back-End\\Eleaving\\Eleaving\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Rinnnqax\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Rinor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

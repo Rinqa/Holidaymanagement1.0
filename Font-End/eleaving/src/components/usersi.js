@@ -5,7 +5,7 @@ import React from 'react'
 import { Component } from 'react'
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab';
-import { Col, Form, Row, Container ,Button} from 'react-bootstrap';
+import { Col, Form, Row, Container ,Button,Image} from 'react-bootstrap';
 import {EditUserModal} from './Edit/EditUserModal'
 export class usersi extends Component {
 
@@ -28,7 +28,7 @@ export class usersi extends Component {
     }
 
     render() {
-        const { user,id,uz,em,mb,gj,np,tl,eml,ps,st,pz,dp,pv,vt,rl,pr } = this.state;
+        const { user,id,uz,em,mb,gj,np,tl,eml,st,pz,dp,pv,vt,rl,pr } = this.state;
         let editModalClose = () => this.setState({ editModalShow: false });
         
         return (
@@ -134,6 +134,14 @@ export class usersi extends Component {
                                 <Row>
 
                                     <Col sm={6}>
+                                        <Form.Group>
+                                        <Image width="400px" height="400px"
+                                                src={process.env.REACT_APP_PHOTOPATH+us.profili} />
+                                        </Form.Group>
+                                        
+                                        
+                                    </Col>
+                                    <Col sm={6}>
                                     <Form.Group controlId="Tel">
                                             <Form.Label>Tel</Form.Label>
                                             <Form.Control type="text" name="username" required
@@ -146,10 +154,6 @@ export class usersi extends Component {
                                                 defaultValue={us.PushimVjetor}
                                                 placeholder="Pushim Vjetor" disabled="True" />
                                         </Form.Group>
-                                        
-                                        
-                                    </Col>
-                                    <Col sm={6}>
                                         <Form.Group controlId="Email">
                                             <Form.Label>Email</Form.Label>
                                             <Form.Control type="text" name="Email" required
@@ -204,6 +208,7 @@ export class usersi extends Component {
                         </div>
 
                     </Tab>
+                    
                 </Tabs>
             </div>
 

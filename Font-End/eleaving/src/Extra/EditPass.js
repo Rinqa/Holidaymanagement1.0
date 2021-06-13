@@ -2,8 +2,7 @@ import React from 'react'
 
 
 import { Component } from 'react'
-import { Button, Row, Col, Form } from 'react-bootstrap';
-import { EditPassModal } from '../components/Edit/EditPassModal';
+import { Button, Form } from 'react-bootstrap';
 export class EditPass extends Component {
 
     constructor(props) {

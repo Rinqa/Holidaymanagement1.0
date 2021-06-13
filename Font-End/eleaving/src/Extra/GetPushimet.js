@@ -24,7 +24,7 @@ export class GetPushimet extends Component {
         this.refreshList();
     }
     render() {
-        const { dep, fz } = this.state;
+        const { dep} = this.state;
         return (
             <div>
             <Navigation/>
