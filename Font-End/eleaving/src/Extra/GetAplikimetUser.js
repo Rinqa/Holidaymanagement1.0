@@ -1,9 +1,5 @@
-
-// import Calendar from 'react-calendar';
 import { Component } from 'react';
-// import 'react-calendar/dist/Calendar.css';//
 import { Col, Row, Table } from 'react-bootstrap'
-import { Navigation } from '../Navigation'
 export class GetAplikimetUser extends Component {
     constructor(props) {
         super(props)

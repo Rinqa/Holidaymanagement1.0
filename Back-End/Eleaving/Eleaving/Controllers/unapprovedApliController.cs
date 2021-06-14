@@ -50,6 +50,7 @@ namespace Eleaving.Controllers
         {
             string query = @"insert into PushimetMarrura (Users,Pushimi,Ditet,Viti) values (
               '" + pm.Users + @"',
+              
               '" + pm.Pushimi + @"',
               '" + pm.Ditet + @"', 
               '" + pm.Viti + @"'
