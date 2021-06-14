@@ -20,12 +20,12 @@ namespace Eleaving.Controllers
         {
             _configuration = configuration;
         }
-        [HttpPut("{ditet}")]
-        public JsonResult Put(Users us,int ditet)
+        [HttpPut]
+        public JsonResult Put(Users us)
         {
             string query = @"
-                    update Aplikimet set 
-                    PushimVjetor = PushimVjetor - '" + ditet + @"'
+                    update Users set 
+                    PushimVjetor = PushimVjetor - '" + us.PushimiVjetor + @"'
                     where Id  = " + us.Id + @"                   
                     ";
             DataTable table = new DataTable();

@@ -78,3 +78,6 @@ create table Aplikimet(
 
 select DataFillimit,DataMbarimit from Aplikimet
 SELECT DATEDIFF(day, DataFillimit, DataMbarimit)+1 AS Ditet from Aplikimet Where Id=1;
+
+update Users set PushimVjetor = PushimVjetor-1 where Id = 1
+select * from Users
