@@ -1,0 +1,49 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Eleaving.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AplikimetUserController : ControllerBase
+    {
+        private readonly IConfiguration _configuration;
+
+        public AplikimetUserController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+        [HttpGet("{id}")]
+
+        public JsonResult Get(int id)
+        {
+            string query = @"
+                    select Id, IdUser, Pushimi,convert(varchar(10),DataFillimit,120) as DataFillimit, convert(varchar(10),DataMbarimit,120) as DataMbarimit, Pershkrimi,Aprovimi from Aplikimet where IdUser=" + id + @"";
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("ElavingApp");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+
+            return new JsonResult(table);
+        }
+
+    }
+}

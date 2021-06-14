@@ -25,6 +25,24 @@ export class unapproved extends Component {
     componentDidUpdate() {
         this.refreshList();
     }
+    countDays(sDate, eDate) {
+
+
+        var date1 = new Date(sDate);
+        var date2 = new Date(eDate);
+
+        var time_difference = date2.getTime() - date1.getTime();
+
+        var result = time_difference / (1000 * 60 * 60 * 24);
+        console.log("res: " + result);
+        return result;
+
+
+    }
+    getDate(){
+        var today = new Date().toLocaleDateString();
+        return today;
+    }
     approvo(id,idU,pu,df,dm,pr) {
         if (window.confirm('Are you sure?')) {
             
@@ -42,6 +60,27 @@ export class unapproved extends Component {
                 DataMbarimit:dm,
                 Pershkrimi:pr,
                 Aprovimi : "Approved",
+            })
+        })
+            .then(res => res.json())
+            .then((result) => {
+                alert(result);
+            },
+                (error) => {
+                    alert('Failed');
+                })
+        
+        fetch(process.env.REACT_APP_API + 'PushimetMarrura', {
+            method: 'Post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                Users: idU,
+                Pushimi:pu,
+                Ditet:this.countDays(df,dm),
+                Viti:this.getDate(),
             })
         })
             .then(res => res.json())
