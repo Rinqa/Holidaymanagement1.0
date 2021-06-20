@@ -10,6 +10,7 @@ using Eleaving.Models;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using Newtonsoft.Json.Linq;
 
 namespace Eleaving.Controllers
 {
@@ -36,12 +37,18 @@ namespace Eleaving.Controllers
                 myCon.Open();
                 using (SqlCommand myCommand = new SqlCommand(query, myCon))
                 {
+
                     myReader = myCommand.ExecuteReader();
+                    
+                    
+                    
                     table.Load(myReader);
                     myReader.Close();
                     myCon.Close();
+                    
                 }
             }
+            
             return new JsonResult(table);
         }
 

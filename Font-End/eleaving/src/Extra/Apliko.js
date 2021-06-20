@@ -19,7 +19,7 @@ export class Apliko extends Component {
             });
     }
     countDays(sDate, eDate) {
-
+        
 
         var date1 = new Date(sDate);
         var date2 = new Date(eDate);
