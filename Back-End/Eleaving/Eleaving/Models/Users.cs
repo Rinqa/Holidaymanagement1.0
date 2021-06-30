@@ -19,7 +19,7 @@ namespace Eleaving.Models
         public string Statusi { get; set; }
         public string Pozita { get; set; }
         public string Departamenti { get; set; }
-        public int PushimiVjetor { get; set; }
+        public int PushimVjetor { get; set; }
         public string Viti { get; set; }
         public string Roli { get; set; }
         public string Profili { get; set; }

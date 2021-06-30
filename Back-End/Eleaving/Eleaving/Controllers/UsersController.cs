@@ -55,7 +55,7 @@ namespace Eleaving.Controllers
         [HttpPost]
         public JsonResult Post(Users u)
         {
-            string query = @"insert into Users (username,Emri,Mbiemri,Gjinia,NrPersonal,Tel,Email,password,Statusi,Pozita,Departamenti,PushimiVjetor,Viti,Roli,Profili)values (
+            string query = @"insert into Users (username,Emri,Mbiemri,Gjinia,NrPersonal,Tel,Email,password,Statusi,Pozita,Departamenti,PushimVjetor,Viti,Roli,Profili)values (
               '" + u.username + @"',
               '" + u.Emri + @"',
               '" + u.Mbiemri + @"',
@@ -67,7 +67,7 @@ namespace Eleaving.Controllers
               '" + u.Statusi + @"',
               '" + u.Pozita + @"',
               '" + u.Departamenti + @"',
-              '" + u.PushimiVjetor + @"',
+              '" + u.PushimVjetor + @"',
               '" + u.Viti + @"',
               '" + u.Roli + @"',
                '"+u.Profili+@"',
@@ -104,7 +104,7 @@ namespace Eleaving.Controllers
                     Statusi = '" + u.Statusi + @"',
                     Pozita = '" + u.Pozita+ @"',
                     Departamenti = '" + u.Departamenti + @"',
-                    PushimVjetor = '" + u.PushimiVjetor+ @"',
+                    PushimVjetor = '" + u.PushimVjetor + @"',
                     Viti = '" + u.Viti+ @"',
                     Roli = '" + u.Roli+ @"',
                     Profili= '"+u.Profili+@"'

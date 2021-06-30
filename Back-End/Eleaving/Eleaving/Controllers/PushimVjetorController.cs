@@ -25,7 +25,7 @@ namespace Eleaving.Controllers
         {
             string query = @"
                     update Users set 
-                    PushimVjetor = PushimVjetor - '" + us.PushimiVjetor + @"'
+                    PushimVjetor = PushimVjetor - '" + us.PushimVjetor + @"'
                     where Id  = " + us.Id + @"                   
                     ";
             DataTable table = new DataTable();

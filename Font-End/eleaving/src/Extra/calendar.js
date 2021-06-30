@@ -1,5 +1,5 @@
 
-import Calendar from 'react-calendar';
+
 import { Component } from 'react';
 import 'react-calendar/dist/Calendar.css';
 import { Col, Row, Table } from 'react-bootstrap'
@@ -20,6 +20,20 @@ export class calendar extends Component {
             .then(data => {
                 this.setState({ fz: data })
             });
+    }
+    countDays(sDate) {
+        
+
+        var date1 = new Date(sDate);
+        var date2 = new Date().toLocaleDateString();
+
+        var time_difference = date2.getTime() - date1.getTime();
+
+        var result = time_difference / (1000 * 60 * 60 * 24);
+        console.log("res: " + result);
+        return result;
+
+
     }
     componentDidMount() {
         this.refreshList();
@@ -80,11 +94,8 @@ export class calendar extends Component {
                         
                         
                     
-                    <Row>
-                            <p>Kalendari
-                            </p>
-                        </Row>
-                        <Row><Calendar /></Row>
+                    
+                            
                     </Col>
                 </Row>
             </div>
